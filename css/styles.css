@@ -235,7 +235,7 @@ a.custom-card:hover {
 
 .elipse{
   margin-top: 93px;
-      margin-left: 100px;
+      margin-left: 115px;
       padding: left 10px;;
       width: 480px;
       height: 130px;
@@ -283,18 +283,30 @@ a.custom-card:hover {
   border-radius: 10px; width: 350px; margin-left: 173px;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
+.a:hover{
+  color: #9B4D00;
+  text-decoration: none;
+  transform: scale(1.05); 
+}
+#boton:hover{
+  background-color: #9B4D00; 
+  transform: scale(1.05);   
+}
 .registro{
   margin-top: 10px;
-  margin-left: 300px;
+  margin-left: 280px;
   font-family: 'Jost';
   font-weight: bold;
 }
 .logo{
     position: absolute;
-    left: 50%;
-    bottom: 30px;
+    left: 55%;
+    bottom: 150px;
+    width: 600px;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
 
 }
+/*
 .contenedor{
  width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -314,9 +326,15 @@ a.custom-card:hover {
 }
 .derecha{
   background-color: #F7A350; 
+}*/
+.logoJaP{
+ margin-left: 35%;
+ margin-bottom: 2%;
+ width: 185px;
 }
 
-
+ 
 
 
 /* css products */
+

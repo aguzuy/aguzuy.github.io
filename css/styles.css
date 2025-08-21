@@ -257,41 +257,15 @@ a.custom-card:hover {
 }
 .logo{
     position: absolute;
-    left: 55%;
-    bottom: 15%;
+    left: 60%;
+    bottom: 40%;
     width: 600px;
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
 
 }
-/*
-.contenedor{
- width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  gap: 0;
-  min-height: 100dvh;
-  
-}
-.izquierda,.derecha{
-  flex: 0 0 50%; 
-  min-width: 0;
-  border: 0;
-}
-
-.izquierda{
-  background-color: #fff;
-}
-.derecha{
-  background-color: #F7A350; 
-}*/
 .logoJaP{
  margin-left: 35%;
  margin-bottom: 2%;
  width: 185px;
 }
-
- 
-
-
-/* css products */
 

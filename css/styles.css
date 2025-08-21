@@ -217,16 +217,19 @@ a.custom-card:hover {
   margin-top: 10px;
   margin-left: 100px; width: 526px; height: 30px;
   font-family:'Jost';
+  font-weight: bold;
   height: 60px;
 }
 #usuario{
   margin-bottom: 50px;
   margin-top: 10px;
-  margin-left: 100px; width: 526px; height: 30px
+  margin-left: 100px; width: 526px; 
   font-family:'Jost';
   height: 60px;
+  font-weight: bold;
 }
 #boton{
+  font-weight: bold;
   margin-top: 80px;
   height: 50px;
   background-color: #F7A350;

@@ -28,6 +28,7 @@ fetch ("https://japceibal.github.io/emercado-api/cats_products/101.json")
         <div class="card expandida" style="width: 18rem;">
             <h5 class="auto-nombre">${auto.name}</h5>
             <p class="auto-desc">${auto.description}</p>
+            <p class="auto-vendidos">Vendidos: ${auto.soldCount}</p>
             <a href="#" class="btn btn-primary">Agregar</a>
         </div>
         `

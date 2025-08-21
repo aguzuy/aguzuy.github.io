@@ -194,7 +194,6 @@ a.custom-card:hover {
 .elipse{
   margin-top: 93px;
       margin-left: 115px;
-      padding: left 10px;;
       width: 480px;
       height: 130px;
       background-color:#F7A350 ;
@@ -259,7 +258,7 @@ a.custom-card:hover {
 .logo{
     position: absolute;
     left: 55%;
-    bottom: 150px;
+    bottom: 15%;
     width: 600px;
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
 

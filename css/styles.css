@@ -196,6 +196,7 @@ a.custom-card:hover {
       height: 130px;
       background-color:#F7A350 ;
       border-radius: 50%;
+      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
     }
 .sesion{
   position: absolute;
@@ -204,6 +205,7 @@ a.custom-card:hover {
       left: 161px;
       top: 112px;
 
+      color: white;
       font-family: 'Jost';
       font-style: normal;
       font-weight: 500;
@@ -212,10 +214,22 @@ a.custom-card:hover {
     }
 #contraseña{
   margin-left: 100px; width: 526px; height: 30px;
+  font-family:'Jost';
 }
 #usuario{
   margin-left: 100px; width: 526px; height: 30px
+  font-family:'Jost';
 }
 #boton{
+  background-color: #F7A350;
+  border: #F7A350;
+  color: white;
   border-radius: 10px; width: 350px; margin-left: 173px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.registro{
+  margin-top: 10px;
+  margin-left: 300px;
+  font-family: 'Jost';
+  font-weight: bold;
 }

@@ -188,3 +188,34 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+.elipse{
+  margin-top: 93px;
+      margin-left: 100px;
+      padding: left 10px;;
+      width: 480px;
+      height: 130px;
+      background-color:#F7A350 ;
+      border-radius: 50%;
+    }
+.sesion{
+  position: absolute;
+      width: 386px;
+      height: 94px;
+      left: 161px;
+      top: 112px;
+
+      font-family: 'Jost';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 65px;
+      line-height: 94px;
+    }
+#contraseña{
+  margin-left: 100px; width: 526px; height: 30px;
+}
+#usuario{
+  margin-left: 100px; width: 526px; height: 30px
+}
+#boton{
+  border-radius: 10px; width: 350px; margin-left: 173px;
+}

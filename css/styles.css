@@ -13,6 +13,48 @@ nav a {
   text-decoration: none;
 }
 
+/* hacer que se muestren de a 3 */
+
+#contenedor-main-tarjetas {
+  display: flex;
+  flex-wrap: wrap;        /* para que bajen fila */
+  gap: 16px;              /* espaciado tarjetas */
+  justify-content: center; /* queden centradas si no son 3 */
+}
+
+/* style hover y sin hover */
+
+.contenedor-tarjetas {
+  position: relative;
+  flex: 0 0 calc((100% - 32px) / 3); /* 3 por fila - establece cantidad por fila */
+  min-width: calc((100% - 32px) / 3);
+}
+
+/* La tarjeta default - manda */
+.contenedor-tarjetas .normal {
+  position: relative;
+  z-index: 2;
+  transition: opacity .3s ease;
+}
+
+/* Dorso superpuesto encima */
+.contenedor-tarjetas .expandida {
+  position: absolute;
+  inset: 0;         
+  opacity: 0;
+  transition: opacity .3s ease;
+  z-index: 1;
+  background: #fff; 
+}
+
+/* Oculto frente, muestro dorso con fade */
+.contenedor-tarjetas:hover .normal { opacity: 0; }
+.contenedor-tarjetas:hover .expandida  { opacity: 1; }
+
+
+/* style hover y sin hover fin */
+
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;

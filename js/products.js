@@ -18,15 +18,19 @@ fetch ("https://japceibal.github.io/emercado-api/cats_products/101.json")
         <div class="card normal" style="width: 18rem;">
             <img src="${auto.image}" class="card-img-top" alt="${auto.name}">
             <div class="card-body">
-                <h5 class="card-title">${auto.name}</h5>
+                <div class="franja">
+                    <h5 class="card-title">${auto.name}</h5>
+                </div>
                 <p class="auto-precio">${auto.cost} ${auto.currency}</p>
-                <a href="#" class="btn btn-primary">Agregar</a>
+                <a href="#" class="btn btn-primary btn-sm">Agregar</a>
             </div>
         </div>
 
         <!-- Al hacer hover -->
         <div class="card expandida" style="width: 18rem;">
-            <h5 class="auto-nombre">${auto.name}</h5>
+            <div class="franja">
+               <h5 class="auto-nombre">${auto.name}</h5>
+             </div>
             <p class="auto-desc">${auto.description}</p>
             <p class="auto-vendidos">Vendidos: ${auto.soldCount}</p>
             <a href="#" class="btn btn-primary">Agregar</a>

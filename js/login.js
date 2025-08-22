@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const usuario = document.getElementById("usuario").value.trim();
     const pass = document.getElementById("contraseña").value.trim();
 
-    // Validaciones: no vacíos
+    // Validaciones no vacíos
     if (usuario === "" || pass === "") {
       alert("Por favor, completa todos los campos.");
       return;
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("usuario", usuario);
 
-    // Redirige a la portada
+    // Redirige al index
     window.location.href = "index.html";
   });
 });
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     sessionStorage.setItem("isLoggedIn", "true");
     sessionStorage.setItem("usuario", usuario);
 
-    // Redirigir a portada
-    window.location.href = "index.html";
+    window.location.href = "index.html"; //Redirigir al index
   });
 });

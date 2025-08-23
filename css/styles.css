@@ -126,7 +126,6 @@ margin-top: 5px;
 
 .card {
   text-align: center;
-  border: 2px solid #7D4600;
   border-radius: 8px;
   overflow: hidden; 
 }
@@ -181,6 +180,7 @@ border: none;
   z-index: 2;
   transition: opacity .3s ease;
   background-color: #FEDFC3;
+  border: 2px solid #7D4600;
 }
 
 /* Dorso superpuesto encima */
@@ -191,6 +191,7 @@ border: none;
   transition: opacity .3s ease;
   z-index: 1;
   background: #FEDFC3; 
+  border: 2px solid #005EDE;
   text-align: center;
   
 }

@@ -10,6 +10,7 @@ fetch ("https://japceibal.github.io/emercado-api/cats_products/101.json")
     const productos = data.products;
     const contenedor= document.getElementById("contenedor-main-tarjetas");
 
+
     productos.forEach(auto => {
         const caja= document.createElement("div");
         caja.className = "contenedor-tarjetas";
@@ -28,7 +29,7 @@ fetch ("https://japceibal.github.io/emercado-api/cats_products/101.json")
 
         <!-- Al hacer hover -->
         <div class="card expandida" style="width: 18rem;">
-            <div class="franja">
+            <div class="franjaHover">
                <h5 class="auto-nombre">${auto.name}</h5>
              </div>
             <p class="auto-desc">${auto.description}</p>
@@ -38,7 +39,6 @@ fetch ("https://japceibal.github.io/emercado-api/cats_products/101.json")
         `
         contenedor.appendChild(caja);
     })
-
 })
 
 .catch(error => {

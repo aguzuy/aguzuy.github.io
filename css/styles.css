@@ -19,14 +19,46 @@ nav a {
 .nav-link{
 color: white;
 }
+.boton-compra{
+    display: inline-block; /* Permite aplicar márgenes y padding */
+  padding: 7px 25px 7px 25px;   /* Relleno dentro del botón */
+  width: 205px;
+  background-color: #E98119; /* Color de fondo */
+  color: white;          /* Color del texto */
+  border: none;          /* Elimina el borde predeterminado */
+  border-radius: 50px;    /* Esquinas redondeadas */
+  text-align: center;    /* Centra el texto */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  cursor: pointer;       /* Cambia el cursor a una mano al pasar por encima */  
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
+  margin: 5px;
+}
+.botones{
+    display: inline-block; /* Permite aplicar márgenes y padding */
+  padding: 10px 25px 10px 25px;   /* Relleno dentro del botón */
+  width: 205px;
+  background-color: #E98119; /* Color de fondo */
+  color: white;          /* Color del texto */
+  border: none;          /* Elimina el borde predeterminado */
+  border-radius: 50px;    /* Esquinas redondeadas */
+  text-align: center;    /* Centra el texto */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  cursor: pointer;       /* Cambia el cursor a una mano al pasar por encima */  
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
+  margin: 5px;
+}
 
+.botones:active {
+  background-color: #9B4D00; /* Cambia el color de fondo */
+  transform: translateY(1px); /* Mueve ligeramente el botón hacia abajo */
+}
 input[type="search"] {
   border-radius: 9999px;
   width: 600px;
 }
 
 .barra-busqueda{
-  margin-right: 100px ;
+  margin-right: 25px ;
 }
 
 .logo-barra{
@@ -34,6 +66,7 @@ height: 55px;
 position: absolute;
 top:0;
 left: 0;
+margin-top: 5px;
 }
 
 .logo-top{
@@ -56,9 +89,32 @@ left: 0;
   color: white;
   font-weight: bold;
   text-align: center;
-  padding: 6px 0;
+  padding: 13px;
   font-size: 1rem;
   line-height: 1.4;
+}
+.franjaHover{background-color: #F58F29;   
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 13px;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top:20px;
+}
+
+.auto-desc{
+  font-family: 'open sans';
+  text-align: center;
+  margin: 9%;
+}
+
+.auto-vendidos{
+  font-family: 'open sans';
+  text-align: center;
+  margin-top: 20%;
+  margin-bottom: 8%;
+
 }
 
 .card-img-top{
@@ -82,6 +138,8 @@ left: 0;
   margin-top: 20px;
   text-align: center;
   font-weight: bold;
+  font-size: 28px;
+  font-family: 'open sans';
 }
 
 .btn{
@@ -132,7 +190,9 @@ border: none;
   opacity: 0;
   transition: opacity .3s ease;
   z-index: 1;
-  background: #ffffff; 
+  background: #FEDFC3; 
+  text-align: center;
+  
 }
 
 
@@ -393,7 +453,6 @@ a.custom-card:hover {
     bottom: 40%;
     width: 600px;
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
-
 }
 .logoJaP{
  margin-left: 35%;

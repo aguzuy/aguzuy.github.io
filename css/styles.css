@@ -385,19 +385,22 @@ a.custom-card:hover {
 
 .fondoCheto{
   background-image: linear-gradient(to right, rgb(255, 255, 255) 50%, #F7A350 50%);
-  height: 100vh; 
-  width: 100vw;
+  min-height: 100vh; 
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 .contenedor{
   display: flex;
-  margin-top: 5vh;
+  padding-top: 5vh;
 }
 
 .derecha{
   flex: 1;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .izquierda{
@@ -405,14 +408,15 @@ a.custom-card:hover {
 }
 
 .elipse{
-  margin-top: 6.5vh;
+  padding-bottom: 5vw;
+  margin-bottom: 10vw;
   margin-left: 8vw;
   width: 35vw;
   height: 8vw;
   background-color:#F7A350 ;
   border-radius: 50%;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
-  margin-bottom: 10vh;
+  
 }
 
 .sesion{
@@ -435,23 +439,25 @@ a.custom-card:hover {
   display: flex;
   margin-top: 1%;
   margin-left: 5.5vw; 
-  width: 40vw; 
-  height: 20vw;
+  height: clamp(40px, 6vh, 72px);
+  width: min(40vw, 500px);
   font-family:'Jost';
   font-weight: bold;
-  height: 8vw;
 }
+
 #textoUs{
   font-weight: bold;
   margin-left: 5.5vw;
+  padding-top: 1vw;
 }
+
 #usuario{
   display: flex;
   margin-bottom: 2vw;
-  margin-top: 1%;
+  padding-top: 1vw;
   margin-left: 5.5vw; 
-  width: 40vw; 
-  height: 8vw;
+  height: clamp(40px, 6vh, 72px);
+  width: min(40vw, 500px);
 
   font-family:'Jost';
   font-weight: bold;
@@ -491,16 +497,16 @@ a.custom-card:hover {
 }
 
 .logo{
-  position: absolute;
-  left: 58vw;
-  bottom: 60vh;
-  width: 40vw;
+  padding-bottom: 5vw;
+  padding-top: 20vh;
+  margin-left: 6vw;
+  max-width: 40vw;
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
 }
 
 .logoJaP{
   margin-left: 31.5vw;
-  margin-top: 40vw;
+ padding-top: 5vw;
   width: 17vw;
 }
 

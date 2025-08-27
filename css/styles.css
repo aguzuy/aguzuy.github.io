@@ -383,15 +383,17 @@ a.custom-card:hover {
 
 /*codigo css Login*/
 
-body {
+.fondoCheto{
   background-image: linear-gradient(to right, rgb(255, 255, 255) 50%, #F7A350 50%);
   height: 100vh; 
   width: 100vw;
   margin: 0;
+  padding: 0;
 }
 
 .contenedor{
   display: flex;
+  margin-top: 5vh;
 }
 
 .derecha{
@@ -419,7 +421,7 @@ body {
   color: white;
   font-family: 'Jost';
   font-style: normal;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 4vw;
   line-height: 8vw;
 }
@@ -437,7 +439,7 @@ body {
   height: 20vw;
   font-family:'Jost';
   font-weight: bold;
-  height: 8vh;
+  height: 8vw;
 }
 #textoUs{
   font-weight: bold;
@@ -449,7 +451,7 @@ body {
   margin-top: 1%;
   margin-left: 5.5vw; 
   width: 40vw; 
-  height: 8vh;
+  height: 8vw;
 
   font-family:'Jost';
   font-weight: bold;
@@ -465,7 +467,7 @@ body {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 
   margin-top: 7vh;
-  height: 8vh;
+  height: 6ch;
   width: 15vw;
   margin-left: 17.5vw;
 }
@@ -491,14 +493,14 @@ body {
 .logo{
   position: absolute;
   left: 58vw;
-  bottom: 40vh;
+  bottom: 60vh;
   width: 40vw;
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
 }
 
 .logoJaP{
   margin-left: 31.5vw;
-  margin-bottom: 2vh;
+  margin-top: 40vw;
   width: 17vw;
 }
 

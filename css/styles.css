@@ -383,21 +383,25 @@ a.custom-card:hover {
 
 /*codigo css Login*/
 
- body {
+body {
   background-image: linear-gradient(to right, rgb(255, 255, 255) 50%, #F7A350 50%);
   height: 100vh; 
   width: 100vw;
   margin: 0;
 }
+
 .contenedor{
   display: flex;
 }
+
 .derecha{
   flex: 1;
 }
+
 .izquierda{
   flex: 1;
 }
+
 .elipse{
   margin-top: 6.5vh;
   margin-left: 8vw;
@@ -408,6 +412,7 @@ a.custom-card:hover {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
   margin-bottom: 10vh;
 }
+
 .sesion{
   position: relative;
   margin-left: 6vw;
@@ -418,10 +423,12 @@ a.custom-card:hover {
   font-size: 4vw;
   line-height: 8vw;
 }
+
 #textoPass{
   font-weight: bold;
   margin-left: 5.5vw;
 }
+
 #contraseña{
   display: flex;
   margin-top: 1%;
@@ -461,34 +468,38 @@ a.custom-card:hover {
   height: 8vh;
   width: 15vw;
   margin-left: 17.5vw;
-  
 }
+
 .a:hover{
   color: #9B4D00;
   text-decoration: none;
   transform: scale(1.05); 
 }
+
 #boton:hover{
   background-color: #9B4D00; 
   transform: scale(1.05);   
 }
+
 .registro{
   margin-top: 3vh;
   font-family: 'Jost';
   font-weight: bold;
- text-align: center;
+  text-align: center;
 }
+
 .logo{
-    position: absolute;
-    left: 58vw;
-    bottom: 40vh;
-    width: 40vw;
-    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
+  position: absolute;
+  left: 58vw;
+  bottom: 40vh;
+  width: 40vw;
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
 }
+
 .logoJaP{
- margin-left: 31.5vw;
- margin-bottom: 2vh;
- width: 17vw;
+  margin-left: 31.5vw;
+  margin-bottom: 2vh;
+  width: 17vw;
 }
 
 @media (max-width:1024px) {

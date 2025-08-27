@@ -449,6 +449,7 @@ a.custom-card:hover {
 }
 
 #boton{
+  font-size: 1.5vw;
   font-weight: bold;
   background-color: #F7A350;
   border: #F7A350;

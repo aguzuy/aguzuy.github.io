@@ -438,7 +438,7 @@ a.custom-card:hover {
 #contraseña{
   display: flex;
   margin-top: 1%;
-  margin-left: 2vw; 
+  margin-left: 5.5vw; 
   height: clamp(40px, 6vh, 72px);
   width: min(40vw, 500px);
   font-family:'Jost';
@@ -454,7 +454,6 @@ a.custom-card:hover {
 #usuario{
   display: flex;
   margin-bottom: 2vw;
-  padding-top: 1vw;
   margin-left: 5.5vw; 
   height: clamp(40px, 6vh, 72px);
   width: min(40vw, 500px);
@@ -515,7 +514,7 @@ a.custom-card:hover {
 @media (max-width: 320px) {
  
 
- .fondoCheto{ 
+.fondoCheto{ 
   margin: 0;
   background-image: none;
   background-color: #ffff;
@@ -572,8 +571,6 @@ a.custom-card:hover {
   font-weight: bold;
   font-size: 8vw;
   line-height: 16vw;
-}
-
 }
 
 #textoUs{
@@ -637,4 +634,5 @@ display: flex;
 height: 8vh;
 width: 40vw;
 margin-left: 57vw;
+} 
 }

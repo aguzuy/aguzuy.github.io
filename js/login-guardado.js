@@ -6,6 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "login.html"; // si no hay sesion
   } else if (userDiv) { //muestra el nombre dentro de span
     const usuario = sessionStorage.getItem("usuario");
-    userDiv.textContent = `Hola, ${sessionStorage.getItem("usuario")}`; //muestra el nombre
+    userDiv.textContent = `Bienvenido, ${sessionStorage.getItem("usuario")}`; //muestra el nombre
   }
 });

@@ -509,10 +509,70 @@ a.custom-card:hover {
   width: 17vw;
 }
 
-@media (max-device-width: 320px) {
- .fondoCheto{
-  background-color: #005EDE;
- }
+@media (max-width: 320px) {
+ 
+
+ .fondoCheto{ 
+  margin: 0;
+  background-image: none;
+  background-color: #ffff;
 }
 
+.contenedor{
+  margin: 0;
+  display: grid;
+}
 
+.derecha{
+  justify-items: flex-start;
+  align-items: flex-start;
+  max-height: 30vh;
+  min-height: 5vh;
+  margin: 0;
+  padding: 0;
+ grid-row: 1; 
+ background-color: #F7A350;
+}
+
+.izquierda{
+  background-color: #005EDE;
+  margin: 0;
+  padding-top: 5vw;
+ grid-row: 2;
+ justify-items: center;
+ align-items: center; 
+}
+
+.logo{
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 20vw;
+  top: 0;
+}
+.elipse{
+  width: 100vw;
+  margin: ;
+  background-color:#F7A350 ;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.sesion{
+  text-align: center;
+}
+#usuario{
+
+}
+
+#contraseña{
+
+}
+
+#boton{
+
+}
+.logoJaP{
+
+}
+
+}

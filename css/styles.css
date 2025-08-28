@@ -204,6 +204,221 @@ border: none;
 
 /* style hover y sin hover fin */
 
+@media (max-width: 768px) {
+
+      .navbar {
+        align-items: stretch;
+        max-width: 100vw;
+        background-color: #F7A350;
+        margin: 0;
+      }
+
+      nav a {
+        text-decoration: none;
+      }
+
+      .nav-link {
+        color: white;
+      }
+
+      .boton-compra {
+        display: inline-block;
+        padding: 7px 25px 7px 25px;
+        width: 17.5vh;
+        background-color: #E98119;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
+        margin: 5px;
+      }
+      #contenedorBotones{
+      grid-template-columns: 1px;
+      display: grid;
+      justify-content: flex-start;
+      }
+      .contenedorBotonIngreso{
+        grid-column: 2;
+      }
+      .contenedorBotonRegistro{
+        grid-column: 1;
+      }
+      .contenedorBotonCompra{
+        grid-column: 3;
+      }
+
+      .botones {
+        display: inline-block;
+        padding: 10px 25px 10px 25px;
+        width: 15vw;
+        background-color: #E98119;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
+        margin: 1vw;
+      }
+
+      #botonRegistro{
+        visibility: hidden;
+      }
+
+      .botones:active {
+        background-color: #9B4D00;
+        transform: translateY(1px);
+      }
+
+      input[type="search"] {
+        border-radius: 9999px;
+        max-width: 40vw;
+      }
+
+      .barra-busqueda {
+
+      }
+
+      .logo-barra {
+        height: 4vh;
+        position: absolute;
+        top: 0;
+        margin-top: 0.5vh;
+      }
+
+      .logo-top {
+
+      }
+
+      .carrito {
+        height: 30px;
+      }
+
+      .card-title {
+        color: white;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        background-color: #F58F29;
+      }
+
+      .franja {
+        background-color: #F58F29;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 13px;
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+
+      .franjaHover {
+        background-color: #F58F29;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 13px;
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-top: 20px;
+      }
+
+      .auto-desc {
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        margin: 9%;
+      }
+
+      .auto-vendidos {
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        margin-top: 20%;
+        margin-bottom: 8%;
+      }
+
+      .card-img-top {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .card {
+        text-align: center;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .card-body {
+        margin-left: -1rem;
+        margin-right: -1rem;
+      }
+
+      .auto-precio {
+        margin-top: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 28px;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      .btn {
+        display: block;
+        margin-left: 80px;
+        margin-right: 80px;
+        font-weight: bold;
+        padding: 0.5rem 1.5rem;
+        border-radius: 9999px;
+        transition: background-color 200ms ease-in-out;
+        cursor: pointer;
+        border: none;
+      }
+
+      #contenedor-main-tarjetas {
+        margin-top: 10vh;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6vw;
+        justify-content: center;
+      }
+
+      .contenedor-tarjetas {
+        position: relative;
+        flex: 0 0 calc((100% - 6vw) / 2);
+        min-width: calc((100% - 6vw) / 2);
+      }
+
+      .contenedor-tarjetas .normal {
+        position: relative;
+        z-index: 2;
+        transition: opacity .3s ease;
+        background-color: #FEDFC3;
+        border: 2px solid #7D4600;
+      }
+
+      .contenedor-tarjetas .expandida {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity .3s ease;
+        z-index: 1;
+        background: #FEDFC3;
+        border: 2px solid #005EDE;
+        text-align: center;
+      }
+
+      .contenedor-tarjetas:hover .normal {
+        opacity: 0;
+      }
+
+      .contenedor-tarjetas:hover .expandida {
+        opacity: 1;
+      }
+    }
 
 .bd-placeholder-img {
   font-size: 1.125rem;

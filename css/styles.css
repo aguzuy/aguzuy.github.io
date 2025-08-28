@@ -13,6 +13,22 @@ nav a {
   text-decoration: none;
 }
 
+
+#usuario {
+  margin-left: auto;       /* lo empuja a la derecha */
+  white-space: nowrap;     /* evita que se corte en varias líneas */
+  padding-right: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Asegura que NO quede el reparto “entre puntas” */
+.navbar .navbar-nav.w-100,
+.navbar .navbar-nav.justify-content-between {
+  width: auto !important;
+  justify-content: flex-start !important;
+}
+
 /* hacer que se muestren de a 3 */
 
 #contenedor-main-tarjetas {
@@ -261,6 +277,7 @@ a.custom-card:hover {
 #contraseña{
   margin-top: 10px;
   margin-left: 100px; width: 526px; height: 30px;
+  display: flex;
   font-family:'Jost';
   font-weight: bold;
   height: 60px;

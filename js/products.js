@@ -43,4 +43,19 @@ fetch ("https://japceibal.github.io/emercado-api/cats_products/101.json")
 
 .catch(error => {
     console.error('There has been a problem with your fetch operation:', error);
+})
+
+document.addEventListener("DOMContentLoaded", () => {
+  const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+  const userDiv = document.getElementById("botonLogin");
+  const botonReg = document.getElementById("botonRegistro");
+
+  if (isLoggedIn) {
+    const usuario = sessionStorage.getItem("usuario");
+    userDiv.innerHTML = `${sessionStorage.getItem("usuario")}
+    <img class="imagenUsuario" src="img/usuarioPerfil.png" alt="Imagen Usuario">
+    `; //muestra el nombre
+    userDiv.href= "#";
+    botonReg.style.display= "none";
+  }
 });

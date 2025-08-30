@@ -276,11 +276,15 @@ border: none;
         filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
        
       }
+      .boton-compra:active {
+        background-color: #9B4D00; /* Cambia el color de fondo */
+        transform: translateY(1px); /* Mueve ligeramente el botón hacia abajo */
+      }
       #contenedorBotones{
-      grid-template-columns: 1px;
-      display: grid;
-      justify-content: flex-start;
-      grid-template-rows: 7vw;
+        grid-template-columns: 1px;
+        display: grid;
+        justify-content: flex-start;
+        grid-template-rows: 7vw;
       }
       .contenedorBotonIngreso{
         grid-column: 2;
@@ -296,10 +300,12 @@ border: none;
         display: inline-block;
         padding: 10px 25px 10px 25px;
         width: 15vw;
+
         background-color: #E98119;
         color: white;
         border: none;
         border-radius: 50px;
+
         text-align: center;
         text-decoration: none;
         cursor: pointer;
@@ -490,13 +496,23 @@ border: none;
   }
   .carrito{
     height: 4vh;
+    margin-left: -2vw;
+    margin-top: -0.5vw;
   }
+
   .boton-compra{
+    text-align: end;
     font-size:0;
     height: 10vw;
-    width: 20vw;
-    color:#E98119
+    width: 18vw;
+    color:#E98119;
+    margin-top: 0.2vw;
   }
+  .boton-compra:active {
+    background-color: #9B4D00; /* Cambia el color de fondo */
+    transform: translateY(1px); /* Mueve ligeramente el botón hacia abajo */
+  }
+
   #botonLogin{
     position: relative;
 
@@ -505,13 +521,14 @@ border: none;
     justify-content: center;
     align-content: center;
     height: 10vw;
-    
-
-
+    margin-top: 0.2vw;
   }
 
   .imagenUsuario{
+    visibility: hidden;
+
     position: absolute;
+    
     top: 0;
     left: 2vh;
     z-index: 2;

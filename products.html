@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <nav class="navbar fixed-top"> 
+  <nav class="navbar"> 
       <div class="logo-top">
       <a class="navbar-brand" href="index.html">
         <img class="logo-barra" src="img/logov1.png" alt="">
@@ -24,7 +24,7 @@
       </div>
       <div class="barra-busqueda">
         <form class="d-flex ">
-         <input class="form-control me-2" type="search" placeholder="Buscar productos, marcas y más..." aria-label="Search">
+         <input class="form-control" id="barraInput" type="search" placeholder="Buscar productos, marcas y más..." aria-label="Search">
         </form>
       </div>
         <div id="contenedorBotones">
@@ -32,11 +32,13 @@
             <button class="botones" id="botonRegistro" href="">Registrarse</button>
           </div>
           <div class="contenedorBotonIngreso">
-            <button class="botones" id="botonLogin" href="login.html">Ingresar</button>
+            <button class="botones" id="botonLogin" href="login.html">Ingresar
+              <img class="imagenUsuario" src="img/usuarioPerfil.png" alt="Imagen Usuario">
+            </button>
           </div>
           <div class="contenedorBotonCompra">
             <button class="boton-compra" href="">Mis compras
-              <img class="carrito"src="img/carrito.png" alt="">
+              <img class="carrito"src="img/carrito.png" alt="Imagen Carrito">
             </button>
           </div>
         </div>

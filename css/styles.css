@@ -11,6 +11,9 @@
 .navbar {
   background-color: #F7A350;
   margin-bottom: 2%;
+  flex-wrap: nowrap;
+  width: 100%;
+  min-height: 10vh;
 }
 nav a {
   text-decoration: none;
@@ -19,10 +22,33 @@ nav a {
 .nav-link{
 color: white;
 }
+#contenedorBotones{
+  display: grid;
+  justify-content: flex-start;
+  margin-right: 3vw;
+  margin-left: 0;
+}
+
+.contenedorBotonIngreso{
+  grid-column: 2;
+}
+
+.contenedorBotonRegistro{
+  grid-column: 1;
+}
+
+.contenedorBotonCompra{
+  grid-column: 3;
+}
+.imagenUsuario{
+  visibility: hidden;
+  max-height: 0;
+}
+
 .boton-compra{
     display: inline-block; /* Permite aplicar márgenes y padding */
   padding: 7px 25px 7px 25px;   /* Relleno dentro del botón */
-  width: 205px;
+  width: 180px;
   background-color: #E98119; /* Color de fondo */
   color: white;          /* Color del texto */
   border: none;          /* Elimina el borde predeterminado */
@@ -33,10 +59,11 @@ color: white;
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
   margin: 5px;
 }
+
 .botones{
     display: inline-block; /* Permite aplicar márgenes y padding */
   padding: 10px 25px 10px 25px;   /* Relleno dentro del botón */
-  width: 205px;
+  width: 150px;
   background-color: #E98119; /* Color de fondo */
   color: white;          /* Color del texto */
   border: none;          /* Elimina el borde predeterminado */
@@ -54,11 +81,11 @@ color: white;
 }
 input[type="search"] {
   border-radius: 9999px;
-  width: 600px;
 }
 
 .barra-busqueda{
-  margin-right: 25px ;
+  margin-right: 2vw;
+  width: 35vw;
 }
 
 .logo-barra{
@@ -67,10 +94,11 @@ position: absolute;
 top:0;
 left: 0;
 margin-top: 5px;
+filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
 }
 
 .logo-top{
-  margin-right: 80px;
+  margin-right: 100px;
 }
 .carrito{
   height: 30px;
@@ -152,6 +180,11 @@ transition: background-color 200ms ease-in-out;
 cursor: pointer;
 border: none;
 }
+  #barraInput{
+
+    width: 100%;
+
+  }
 
 
 
@@ -160,10 +193,13 @@ border: none;
 
 
 #contenedor-main-tarjetas {
+  margin-top: 5vh;
+  margin-left: 5vw;
   display: flex;
   flex-wrap: wrap;        /* para que bajen fila */
   gap: 16px;              /* espaciado tarjetas */
   justify-content: center; /* queden centradas si no son 3 */
+  align-content: center;
 }
 
 /* style hover y sin hover */
@@ -208,13 +244,18 @@ border: none;
 
       .navbar {
         align-items: stretch;
-        max-width: 100vw;
+        width: 100%;
         background-color: #F7A350;
-        margin: 0;
+        min-height: 7vh;
+     
       }
 
       nav a {
         text-decoration: none;
+      }
+      .barra-busqueda{
+        margin: 0;
+        height: 4vh;
       }
 
       .nav-link {
@@ -233,12 +274,13 @@ border: none;
         text-decoration: none;
         cursor: pointer;
         filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
-        margin: 5px;
+       
       }
       #contenedorBotones{
       grid-template-columns: 1px;
       display: grid;
       justify-content: flex-start;
+      grid-template-rows: 7vw;
       }
       .contenedorBotonIngreso{
         grid-column: 2;
@@ -276,22 +318,14 @@ border: none;
 
       input[type="search"] {
         border-radius: 9999px;
-        max-width: 40vw;
-      }
-
-      .barra-busqueda {
-
       }
 
       .logo-barra {
-        height: 4vh;
+        height: 6vh;
         position: absolute;
         top: 0;
         margin-top: 0.5vh;
-      }
-
-      .logo-top {
-
+        filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
       }
 
       .carrito {
@@ -379,7 +413,7 @@ border: none;
       }
 
       #contenedor-main-tarjetas {
-        margin-top: 10vh;
+        margin-top: 5vh;
         display: flex;
         flex-wrap: wrap;
         gap: 6vw;
@@ -419,6 +453,84 @@ border: none;
         opacity: 1;
       }
     }
+
+@media (max-width: 320px){
+
+  .contenedor-tarjetas {
+  position: relative;
+  flex: 0 0 calc((100% - 32px) / 1); /* 3 por fila - establece cantidad por fila */
+  min-width: calc((100% - 32px) / 1);
+}
+  .navbar {
+    align-items: stretch;
+    width: 100%;
+    background-color: #F7A350;
+
+  }
+  
+  
+  .barra-busqueda{
+    margin: 0;
+  }
+  .logo-top{
+    margin-right: 21vw;
+  }
+
+  .logo-barra {
+    height: 12vw;
+    position: absolute;
+    top: 0;
+    margin-top: 0.5vh;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
+  }
+  #barraInput{
+
+    width: 27vw;
+
+  }
+  .carrito{
+    height: 4vh;
+  }
+  .boton-compra{
+    font-size:0;
+    height: 10vw;
+    width: 20vw;
+    color:#E98119
+  }
+  #botonLogin{
+    position: relative;
+
+    display: flex;
+    font-size: 0;
+    justify-content: center;
+    align-content: center;
+    height: 10vw;
+    
+
+
+  }
+
+  .imagenUsuario{
+    position: absolute;
+    top: 0;
+    left: 2vh;
+    z-index: 2;
+   min-width: 8vw;
+   min-height: 5vh;
+   visibility: visible;
+   margin-bottom: 5vh;
+}
+#contenedor-main-tarjetas {
+  position: absolute;
+  top:10vh;
+  left: 0;
+justify-content: center;
+align-content: center;
+margin: 0;
+
+}
+
+}    
 
 .bd-placeholder-img {
   font-size: 1.125rem;

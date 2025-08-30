@@ -491,12 +491,15 @@ border: none;
   .carrito{
     height: 4vh;
   }
+
   .boton-compra{
     font-size:0;
     height: 10vw;
-    width: 20vw;
-    color:#E98119
+    width: 18vw;
+    color:#E98119;
+    margin-top: 0.2vw;
   }
+  
   #botonLogin{
     position: relative;
 
@@ -505,9 +508,7 @@ border: none;
     justify-content: center;
     align-content: center;
     height: 10vw;
-    
-
-
+    margin-top: 0.2vw;
   }
 
   .imagenUsuario{

@@ -276,6 +276,10 @@ border: none;
         filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
        
       }
+      .boton-compra:active {
+  background-color: #9B4D00; /* Cambia el color de fondo */
+  transform: translateY(1px); /* Mueve ligeramente el botón hacia abajo */
+}
       #contenedorBotones{
       grid-template-columns: 1px;
       display: grid;
@@ -499,7 +503,11 @@ border: none;
     color:#E98119;
     margin-top: 0.2vw;
   }
-  
+        .boton-compra:active {
+  background-color: #9B4D00; /* Cambia el color de fondo */
+  transform: translateY(1px); /* Mueve ligeramente el botón hacia abajo */
+}
+
   #botonLogin{
     position: relative;
 

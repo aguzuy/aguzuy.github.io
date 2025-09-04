@@ -29,7 +29,7 @@
       </div>
         <div id="contenedorBotones">
           <div class="contenedorBotonRegistro">
-            <button class="botones" id="botonRegistro" href="">Registrarse</button>
+            <button class="botones" id="botonRegistro" href="#">Registrarse</button>
           </div>
           <div class="contenedorBotonIngreso">
             <button class="botones" id="botonLogin" href="login.html">Ingresar
@@ -37,17 +37,59 @@
             </button>
           </div>
           <div class="contenedorBotonCompra">
-            <button class="boton-compra" href="">Mis compras
+            <button class="boton-compra" href="#">Mis compras
               <img class="carrito"src="img/carrito.png" alt="Imagen Carrito">
             </button>
           </div>
         </div>
   </nav>
   <main class="pb-5 container">
-    <!-- Aca se ingresan las tarjetas -->
-    <div id="contenedor-main-tarjetas">
+    <div id="contenedor-principal-products">
+      <!-- Aca comienzan los botones de filtros -->
+      <div id="botones-filtros">
+
+        <div id="cont-filtro-precio-desc">
+          <button class="botones-filtros" id="filtro-precio-desc" href="#">
+              <img id="filtro-desc-img" src="img/carrito.png" alt="Imagen Filtro Descendente Precio">$
+          </button>
+        </div>
+
+        <div id="cont-filtro-precio-asc">
+          <button class="botones-filtros" id="filtro-precio-asc" href="#">
+              <img id="filtro-asc-img" src="img/carrito.png" alt="Imagen Filtro Ascendente Precio">$
+          </button>
+        </div>
+
+        <div id="cont-filtro-rel">
+          <button class="botones-filtros" id="filtro-rel" href="#">
+              <img id="filtro-rel-img" src="img/carrito.png" alt="Imagen Filtro Mayor Relevancia">Rel
+          </button>
+        </div>
+
+      </div>
+      <!-- Aca terminan los botones de filtros -->
+
+      <!-- Aca comienza filtrador por precio -->
+      <div id="cont-filtro-precio">
+        <form>
+          <label>Min</label>
+          <input class="filtro-precio-input" id="price-min" type="number" min="0">
+          <label>Max</label>
+          <input class="filtro-precio-input" id="price-max" type="number" min="0">
+          <button id="filtro-precio-btn">
+          Filtrar
+          </button>
+        </form>
+      </div>
+      <!-- Aca termina filtrador por precio -->
+
+      <!-- Aca se ingresan las tarjetas -->
+      <div id="contenedor-main-tarjetas">
+
+      </div>
+      <!-- Aca terminan las tarjetas -->
+
     </div>
-    <!-- Aca terminan las tarjetas -->
   </main>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>

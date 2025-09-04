@@ -65,12 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
         botonReg.style.display= "none"; //esconde btn registro
     }
 
-    
-    const filtroAsc = document.getElementById("filtro-precio-asc");
     const filtroDesc = document.getElementById("filtro-precio-desc");
+    const filtroAsc = document.getElementById("filtro-precio-asc");
     const filtroRel = document.getElementById("filtro-rel");
 
-    filtroAsc.addEventListener("click", () => {
+    filtroDesc.addEventListener("click", () => {
         datos.sort(function(act,pos){
             if(act.cost>pos.cost)
                 return -1;
@@ -79,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarTarjetas(datos);
     })
 
-    filtroDesc.addEventListener("click", () => {
+    filtroAsc.addEventListener("click", () => {
         datos.sort(function(act,pos){
             if(act.cost>pos.cost)
                 return 1;

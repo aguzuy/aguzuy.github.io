@@ -104,6 +104,59 @@ filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
   height: 30px;
 }
 
+#contenedor-principal-products{
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: 90% auto 0;
+}
+
+#botones-filtros{
+  display: flex;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#cont-filtro-precio{
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 6.5vh;
+}
+
+#contenedor-main-tarjetas{
+  grid-column: 1;
+  margin-top: 0;
+  grid-row: 1;
+}
+
+.botones-filtros{
+  display:flex;
+  padding: 5px;
+  margin-left: 0.25vw;
+  margin-right: 0.25vw;
+  border-radius: 15px;
+}
+
+.filtro-precio-input{
+  width: 10.5vw;
+}
+
+#filtro-asc-img{
+  width: 1.5vw;
+}
+
+#filtro-desc-img{
+  width: 1.5vw;
+}
+
+#filtro-rel-img{
+  width: 1.5vw;
+}
+
+#filtro-precio-btn{
+  border-radius: 15px;
+  margin-top: 1vh;
+}
+
 .card-title{
   color:white;
   text-align: center;
@@ -193,8 +246,6 @@ border: none;
 
 
 #contenedor-main-tarjetas {
-  margin-top: 5vh;
-  margin-left: 5vw;
   display: flex;
   flex-wrap: wrap;        /* para que bajen fila */
   gap: 16px;              /* espaciado tarjetas */

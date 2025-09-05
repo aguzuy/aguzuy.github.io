@@ -413,6 +413,8 @@ border: none;
         grid-column: 1;
         margin-top: 0;
         grid-row: 2;
+        position: relative;
+        left:5vw;
       }
 
       .botones-filtros{
@@ -441,7 +443,6 @@ border: none;
 
       #filtro-precio-btn{
         border-radius: 15px;
-        margin-top: 1vh;
       }
 
       .card-title {
@@ -569,10 +570,10 @@ border: none;
 @media (max-width: 320px){
 
   .contenedor-tarjetas {
-  position: relative;
-  flex: 0 0 calc((100% - 32px) / 1); /* 3 por fila - establece cantidad por fila */
-  min-width: calc((100% - 32px) / 1);
-}
+    position: relative;
+    flex: 0 0 calc((100% - 32px) / 1); /* 3 por fila - establece cantidad por fila */
+    min-width: calc((100% - 32px) / 1);
+  }
   .navbar {
     align-items: stretch;
     width: 100%;
@@ -632,26 +633,76 @@ border: none;
 
   .imagenUsuario{
     visibility: hidden;
-
     position: absolute;
-    
     top: 0;
     left: 2vh;
     z-index: 2;
-   min-width: 8vw;
-   min-height: 5vh;
-   visibility: visible;
-   margin-bottom: 5vh;
-}
-#contenedor-main-tarjetas {
-  position: absolute;
-  top:10vh;
-  left: 0;
-justify-content: center;
-align-content: center;
-margin: 0;
+    min-width: 8vw;
+    min-height: 5vh;
+    visibility: visible;
+    margin-bottom: 5vh;
+  }
 
-}
+  #contenedor-main-tarjetas {
+    position:relative;
+    left: -3vw;
+    margin: 0;
+  }
+
+  #contenedor-principal-products{
+    max-width: 100vw;
+    display: grid;
+    grid-template-rows: 6% auto;
+  }
+
+  #botones-filtros{
+    justify-content: flex-start;
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 0.5vh;
+  }
+
+  #cont-filtro-precio{
+    justify-content: flex-start;
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 8vh;
+  }
+
+  #contenedor-main-tarjetas{
+    grid-column: 1;
+    margin-top: 0;
+    grid-row: 2;
+  }
+
+  .botones-filtros{
+    display:flex;
+    padding: 5px;
+    margin-left: 0.25vw;
+    margin-right: 0.25vw;
+    border-radius: 15px;
+  }
+
+  .filtro-precio-input{
+    width: 15vw;
+  }
+
+  #filtro-asc-img{
+    width: 7vw;
+  }
+
+  #filtro-desc-img{
+    width: 7vw;
+  }
+
+  #filtro-rel-img{
+    width: 7vw;
+  }
+
+  #filtro-precio-btn{
+    border-radius: 15px;
+  }
 
 }    
 

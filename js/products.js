@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const caja= document.createElement("div");
 
             caja.className = "contenedor-tarjetas";
+            caja.dataset.id = auto.id;
             caja.innerHTML=`
             <!-- Sin hover -->
             <div class="card normal" style="width: 18rem;">
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h5 class="card-title">${auto.name}</h5>
                     </div>
                     <p class="auto-precio">${auto.cost} ${auto.currency}</p>
-                    <a href="#" class="btn btn-primary btn-sm">Agregar</a>
+                    <a href="../product-info.html" class="btn btn-primary btn-sm btnAgregar" data-id="${auto.id}">Agregar</a>
                 </div>
             </div>
 
@@ -46,12 +47,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <p class="auto-desc">${auto.description}</p>
                 <p class="auto-vendidos">Vendidos: ${auto.soldCount}</p>
-                <a href="#" class="btn btn-primary">Agregar</a>
+                <a href="../product-info.html" class="btn btn-primary btnAgregar" data-id="${auto.id}">Agregar</a>
             </div>
             `
             contenedor.appendChild(caja);
         })
     }
+
+    contenedor.addEventListener('click', (e) => {
+        const link = e.target.closest('a.btnAgregar');
+        if (!link || !contenedor.contains(link)) return;
+
+        const caja = link.closest('.contenedor-tarjetas');
+        const productId = caja?.dataset.id ?? link.dataset.id;
+
+        localStorage.setItem("productID", String(productId));
+
+        window.location.href = "../product-info.html";
+    });
 
     const isLoggedIn = sessionStorage.getItem("isLoggedIn");
     const userDiv = document.getElementById("botonLogin");

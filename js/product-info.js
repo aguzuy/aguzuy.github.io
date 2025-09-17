@@ -58,7 +58,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         c.querySelector('.anterior').addEventListener('click', () => mostrar(i - 1));
         c.querySelector('.siguiente').addEventListener('click', () => mostrar(i + 1));
-        }
-
+    }
+    
+    const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+    const userDiv = document.getElementById("botonLogin");
+    const botonReg = document.getElementById("botonRegistro");
+    
+    if (isLoggedIn) {
+        userDiv.innerHTML = `${sessionStorage.getItem("usuario")}
+        <img class="imagenUsuario" src="img/usuarioPerfil.png" alt="Imagen Usuario">
+        `; //muestra el nombre y la imagen
+        userDiv.href= "#"; 
+        botonReg.style.display= "none"; //esconde btn registro
+    }
         
  })

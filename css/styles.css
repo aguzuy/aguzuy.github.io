@@ -1224,7 +1224,8 @@ margin-left: 57vw;
 
 .contenedorDerechaAbajo {
   margin: 0%;
-  height: 39vh;
+  height: 70%;
+  width: auto;
   background-color: #FEDFC3;
   display: flex;
   flex-direction: column; /* Apila los elementos verticalmente */

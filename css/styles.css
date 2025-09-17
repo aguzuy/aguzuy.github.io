@@ -1182,6 +1182,8 @@ margin-left: 57vw;
 
 /* product info css */
 .cont-carrusel { 
+  margin-left: 5vw;
+  margin-top: 10vh;
   width: 50%;
   border: 2px solid #7D4600;
   position: relative;
@@ -1236,4 +1238,544 @@ margin-left: 57vw;
   right: 0.5vw;
   width: 2vw;
   border-radius: 50vw;
+}
+
+        
+        
+
+.contenedorDerecha {
+  position:absolute;
+  top:22vh;
+  left:60vw;
+  text-align: center;
+  padding: 0;
+  background-color: #F58F29;
+  border: 2px solid #7D4600;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  float: right;
+  margin-right: 22vw;
+}
+        
+
+.contenedorDerechaAbajo {
+  margin: 0%;
+  height: 70%;
+  width: auto;
+  background-color: #FEDFC3;
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+        
+
+#nombreProducto {
+  text-align: center;
+  margin-bottom: 2vh;
+  color: white;
+  font-size: 1.5em;
+}
+
+#categoria {
+  text-align: center;
+  margin-top: 1vw;
+  color: #777;
+  font-style: italic;
+}
+
+
+#precio { 
+  text-align: center;
+  margin-top: 4vw;
+  margin-bottom: 5vw;
+
+  font-size: 2em;
+  color: #000;
+  font-weight: bold;
+  font-family: 'jost';
+}
+
+#cantVendidos {
+  margin-top: 2vh;
+  margin-bottom: 1vw;
+
+  color: #888;
+  font-size: 1em;
+  font-weight: bold;
+}
+.btn-agregar {
+  margin-top: 4vh;
+  margin-left: 5vw;
+  margin-bottom: 1vw;
+  padding: 0.5vw 0.2vh;
+  width: 10vw;
+
+  background-color: #005EDE;
+  color: white;
+  border: none;
+  border-radius: 50px;
+
+  cursor: pointer;
+  font-size: 1em;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+        
+.btn-agregar:hover {
+  background-color: #012962;
+}
+.contenedorInferior{
+  display: flex;    
+}
+.descripcionProducto {
+  margin-top: 6vh;
+  margin-left: 5vw;
+  padding: 3vw;
+
+  width: 50%;
+  background-color: #FEDFC3;
+  border: 2px solid #7D4600;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#icono-jap{
+  margin-right: 3vw;
+  margin-bottom: 3vh;
+  float: right;
+}
+
+img.icono-jap-product-info{
+  width: 15vw;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .cont-carrusel { 
+  margin-left: 5vw;
+  margin-top: 5vh;
+  width: 65%;
+  border: 2px solid #7D4600;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.carousel-slide {
+  display: none;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.3rem;
+}
+
+.carousel-slide.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.carousel-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.anterior{
+  left: 0.5vw;
+  width: 2vw;
+  border-radius: 50vw;
+}
+.siguiente{
+  right: 0.5vw;
+  width: 2vw;
+  border-radius: 50vw;
+}
+
+        
+        
+
+.contenedorDerecha {
+  position:absolute;
+  top:12vh;
+  left:75vw;
+  text-align: center;
+  padding: 0;
+  background-color: #F58F29;
+  border: 2px solid #7D4600;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  float: right;
+  margin-right: 22vw;
+}
+        
+
+.contenedorDerechaAbajo {
+  margin: 0%;
+  height: 21vh;
+  background-color: #FEDFC3;
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+        
+
+#nombreProducto {
+  text-align: center;
+  margin-bottom: 1vh;
+  color: white;
+  font-size: 1em;
+}
+
+#categoria {
+  text-align: center;
+  margin-top: 1vw;
+  color: #777;
+  font-style: italic;
+}
+
+
+#precio { 
+  text-align: center;
+  margin-top: 5vw;
+  margin-bottom: 2vw;
+
+  font-size: 1.75em;
+  color: #000;
+  font-weight: bold;
+  font-family: 'jost';
+}
+
+#cantVendidos {
+  margin-top: 1vh;
+  margin-bottom: 1vw;
+
+  color: #888;
+  font-size: 1em;
+  font-weight: bold;
+}
+.btn-agregar {
+  margin-top: 1vh;
+  margin-left: 5vw;
+  margin-bottom: 1vw;
+  padding: 0.3vw 0.2vh;
+  width: 10vw;
+
+  background-color: #005EDE;
+  color: white;
+  border: none;
+  border-radius: 50px;
+
+  cursor: pointer;
+  font-size: 1em;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+        
+.btn-agregar:hover {
+  background-color: #012962;
+}
+.contenedorInferior{
+  display: flex;    
+}
+.descripcionProducto {
+  margin-top: 6vh;
+  margin-left: 5vw;
+  padding: 3vw;
+
+  width: 65%;
+  background-color: #FEDFC3;
+  border: 2px solid #7D4600;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#icono-jap{
+  margin-right: 5vw;
+  margin-bottom: 0vh;
+  float: right;
+}
+
+img.icono-jap-product-info{
+  width: 15vw;
+  height: auto;
+}
+
+}
+
+@media (max-width: 320px){
+
+.navbar {
+    align-items: stretch;
+    width: 100%;
+    background-color: #F7A350;
+
+}
+  
+  
+.barra-busqueda{
+    margin: 0;
+}
+
+.logo-top{
+    margin-right: 21vw;
+}
+
+.logo-barra {
+    height: 12vw;
+    position: absolute;
+    top: 0;
+    margin-top: 0.5vh;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
+}
+
+#barraInput{
+
+    width: 27vw;
+
+}
+
+.carrito{
+    height: 4vh;
+    margin-left: -2vw;
+    margin-top: -0.5vw;
+}
+
+.boton-compra{
+    text-align: end;
+    font-size:0;
+    height: 10vw;
+    width: 18vw;
+    color:#E98119;
+    margin-top: 0.2vw;
+}
+.boton-compra:active {
+  background-color: #9B4D00; /* Cambia el color de fondo */
+  transform: translateY(1px); /* Mueve ligeramente el botón hacia abajo */
+}
+
+#botonLogin{
+    position: relative;
+
+    display: flex;
+    font-size: 0;
+    justify-content: center;
+    align-content: center;
+    height: 10vw;
+    margin-top: 0.2vw;
+}
+
+.imagenUsuario{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 2vh;
+    z-index: 2;
+    min-width: 8vw;
+    min-height: 5vh;
+    visibility: visible;
+    margin-bottom: 5vh;
+  }
+
+.cont-carrusel { 
+  margin-left: 5vw;
+  margin-top: 5vh;
+  width: 90%;
+  border: 2px solid #7D4600;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.carousel-slide {
+  display: none;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.3rem;
+}
+
+.carousel-slide.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.carousel-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.2rem;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.anterior{
+  left: 0.5vw;
+  width: 1vw;
+  border-radius: 50vw;
+}
+.siguiente{
+  right: 0.5vw;
+  width: 1vw;
+  border-radius: 50vw;
+}
+/* modificar*/
+
+.contenedorDerecha {
+  position:absolute;
+  top:47vh;
+  left:5vw;
+  text-align: center;
+  padding: 0;
+  background-color: #F58F29;
+  border: 2px solid #7D4600;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  float: right;
+  margin-right: 22vw;
+}
+        
+
+.contenedorDerechaAbajo {
+  margin: 0%;
+  height: 25vh;
+  background-color: #FEDFC3;
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+        
+
+#nombreProducto {
+  text-align: center;
+  margin-bottom: 1vh;
+  color: white;
+  font-size: 1em;
+}
+
+#categoria {
+  text-align: center;
+  margin-top: 1vw;
+  color: #777;
+  font-style: italic;
+}
+
+
+#precio { 
+  text-align: center;
+  margin-top: 6vw;
+  margin-bottom: 3vw;
+
+  font-size: 1.75em;
+  color: #000;
+  font-weight: bold;
+  font-family: 'jost';
+}
+
+#cantVendidos {
+  margin-top: 1vh;
+  margin-bottom: 2vw;
+
+  color: #888;
+  font-size: 1em;
+  font-weight: bold;
+}
+.btn-agregar {
+  margin-top: 1vh;
+  margin-left: 32vw;
+  margin-bottom: 4vw;
+  padding: 0.3vw 0.2vh;
+  width: 25vw;
+
+  background-color: #005EDE;
+  color: white;
+  border: none;
+  border-radius: 50px;
+
+  cursor: pointer;
+  font-size: 1em;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+        
+.btn-agregar:hover {
+  background-color: #012962;
+}
+.contenedorInferior{
+  flex-direction: column;
+  display: flex;    
+}
+.descripcionProducto {
+  
+  margin-top: 43vh;
+  margin-left: 5vw;
+  padding: 3vw;
+
+  width: 90%;
+  background-color: #FEDFC3;
+  border: 2px solid #7D4600;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#icono-jap{
+  margin-right: 5vw;
+  margin-bottom: 2vh;
+  float: right;
+}
+
+img.icono-jap-product-info{
+  width: 30vw;
+  height: auto;
+}
+
 }

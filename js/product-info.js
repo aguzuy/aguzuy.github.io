@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="contenedorDerechaAbajo">
                     <h1 id="precio">${data.cost} ${data.currency}</h1>
                     <p id="cantVendidos">Vendidos: ${data.soldCount}</p>
+                    <button class="btn-agregar">Agregar</button>
                 </div>
             </div>
             <div class="contenedorInferior">

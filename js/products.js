@@ -118,10 +118,29 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         datos=datos.filter(function(a){
             if(a.cost>=precioMin && a.cost <= precioMax){
-                return a;
+                return true;
             }
         })
         mostrarTarjetas(datos);
+    })
+
+    const inputBsq = document.getElementById("busqueda");
+    let datosNuevo = [];
+
+    inputBsq.addEventListener("input", function(e) {
+        const buscar = e.currentTarget.value.trim().toString().toLowerCase();
+        datosNuevo=datos.filter(function(a){
+            const descripcion = a.description.toString().toLowerCase();
+            const titulo = a.name.toString().toLowerCase();
+            if(descripcion.includes(buscar) || titulo.includes(buscar)){
+                return true;
+            }
+        })
+        mostrarTarjetas(datosNuevo);
+
+        if(buscar===""){
+            mostrarTarjetas(datos);
+        }
     })
 });
 

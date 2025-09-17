@@ -156,7 +156,19 @@ filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
   border-radius: 15px;
   margin-top: 1vh;
 }
-
+#cont-filtro-busq{
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 27vh;
+}
+#busqueda{
+  width:85%;
+  min-height: 3vh;
+}
+#filtro-busqueda-btn{
+  border-radius: 15px;
+  margin-top: 1vh;
+}
 .card-title{
   color:white;
   text-align: center;
@@ -344,6 +356,7 @@ border: none;
         grid-column: 1;
       }
       .contenedorBotonCompra{
+        margin-top: 0.3vh;
         grid-column: 3;
       }
 
@@ -375,6 +388,7 @@ border: none;
 
       input[type="search"] {
         border-radius: 9999px;
+        margin-top: 1vh;
       }
 
       .logo-barra {
@@ -443,6 +457,21 @@ border: none;
 
       #filtro-precio-btn{
         border-radius: 15px;
+      }
+
+      #cont-filtro-busq{
+        justify-content: flex-start;
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 10vh;
+      }
+
+      #busqueda{
+        width:35.56%
+      }
+
+      #filtro-busqueda-btn{
+        margin-left: 1vh;
       }
 
       .card-title {
@@ -581,6 +610,10 @@ border: none;
 
   }
   
+  input[type="search"] {
+    border-radius: 9999px;
+    margin-top: 0;
+  }
   
   .barra-busqueda{
     margin: 0;
@@ -599,7 +632,7 @@ border: none;
   #barraInput{
 
     width: 27vw;
-
+    margin-bottom: 0;
   }
   .carrito{
     height: 4vh;
@@ -672,7 +705,7 @@ border: none;
 
   #contenedor-main-tarjetas{
     grid-column: 1;
-    margin-top: 0;
+    margin-top: 4vh;
     grid-row: 2;
   }
 
@@ -698,6 +731,13 @@ border: none;
 
   #filtro-rel-img{
     width: 7vw;
+  }
+
+  #cont-filtro-busq{
+    justify-content: flex-start;
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 15vh;
   }
 
   #filtro-precio-btn{

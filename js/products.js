@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h5 class="card-title">${auto.name}</h5>
                     </div>
                     <p class="auto-precio">${auto.cost} ${auto.currency}</p>
-                    <a href="../product-info.html" class="btn btn-primary btn-sm btnAgregar" data-id="${auto.id}">Agregar</a>
+                    <a href="#" class="btn btn-primary btn-sm btnAgregar" data-id="${auto.id}">Agregar</a>
                 </div>
             </div>
 
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <p class="auto-desc">${auto.description}</p>
                 <p class="auto-vendidos">Vendidos: ${auto.soldCount}</p>
-                <a href="../product-info.html" class="btn btn-primary btnAgregar" data-id="${auto.id}">Agregar</a>
+                <a href="#" class="btn btn-primary btnAgregar" data-id="${auto.id}">Agregar</a>
             </div>
             `
             contenedor.appendChild(caja);
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         localStorage.setItem("productID", String(productId));
 
-        window.location.href = "../product-info.html";
+        window.location.href = "product-info.html";
     });
 
     const isLoggedIn = sessionStorage.getItem("isLoggedIn");

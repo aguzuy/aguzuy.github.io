@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const prodID = localStorage.getItem("productID");
     const contenedor = document.getElementById("contenedor-prin");
     const contenedorRecs = document.getElementById("contenedor-prin-recs");
+    const contenedorComs = document.getElementById("contenedor-prin-comentarios");
 
     fetch ("https://japceibal.github.io/emercado-api/products/" + prodID + ".json")
     .then (response => {
@@ -88,9 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!link || !contenedorRecs.contains(link)) return;
 
         const caja = link.closest('.contenedor-tarjeta-recomendados');
-        const productId = caja?.dataset.id ?? link.dataset.id;
+        const productoId = caja?.dataset.id ?? link.dataset.id;
 
-        localStorage.setItem("productID", String(productId));
+        localStorage.setItem("productID", String(productoId));
 
         window.location.href = "product-info.html";
     });
@@ -108,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     //aca comentarios
-    /*fetch ("https://japceibal.github.io/emercado-api/products/" + prodID + ".json")
+    fetch ("https://japceibal.github.io/emercado-api/products_comments/" + prodID + ".json")
     .then (response => {
         if(!response.ok){
             throw new Error("network response was not ok" + response.statusText)
@@ -120,32 +121,33 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     function mostrarComentarios(comentarios){
+        contenedorComs.innerHTML = "";
+        comentarios.forEach(com => {
         const caja= document.createElement("div");
-        caja.className = "contenedor-producto";
-        caja.innerHTML=`
-            <div class="cont-carrusel">
-                ${data.images.map((imgSrc, index) => `
-                <div class="carousel-slide ${index === 0 ? 'active' : ''}">
-                    <img src="${imgSrc}" alt="${data.name} - Imagen ${index + 1}">
-                </div>
-                `).join('')}
-                <button type="button" class="carousel-btn anterior text-3xl p-4 rounded-full"><i class="fas fa-chevron-left"></i></button>
-                <button type="button" class="carousel-btn siguiente text-3xl p-4 rounded-full"><i class="fas fa-chevron-right"></i></button>
+
+            caja.className = "contenedor-comentarios";
+            caja.innerHTML=`
+            <div class="cont-usuario">
+                <p class="com-usuario">${com.user}</p>
+            </div>    
+            <div class="cont-fecha">
+                <p class="com-fecha">${com.dateTime}</p>
             </div>
-            <div class="contenedorDerecha">
-                <div class="contenedorDerechaArriba">
-                    <p id="categoria">Categoría: ${data.category}</p>
-                    <h1 id="nombreProducto">${data.name}</h1>
-                </div>
-                <div class="contenedorDerechaAbajo">
-                    <h1 id="precio">${data.cost} ${data.currency}</h1>
-                    <p id="cantVendidos">Vendidos: ${data.soldCount}</p>
-                    <button class="btn-agregar">Agregar</button>
-                </div>
+            <div class="cont-contenido-comentario">
+                <p class="com-contenido">${com.description}</p>
             </div>
-            <div class="contenedorInferior">
-                <p class="descripcionProducto">${data.description}</p>
+            <div class="cont-rating">
             </div>
-        ` 
-    }*/
+            `
+            const max = 5;
+            // Convierte a número y acota a 0..5
+            const val = Math.max(0, Math.min(Number(com.score) || 0, max));
+            const contEstrellas = caja.querySelector(".cont-rating");
+            contEstrellas.innerHTML=
+            `<i class="bi bi-star-fill"></i>`.repeat(val) +
+            `<i class="bi bi-star"></i>`.repeat(max - val);
+
+            contenedorComs.appendChild(caja);
+        })
+    }
  })

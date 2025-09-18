@@ -1779,3 +1779,17 @@ img.icono-jap-product-info{
 }
 
 }
+
+/*Products info css nuevo */
+
+#contenedor-prin-recs{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left:5vw; 
+}
+
+.contenedor-tarjeta-recomendados{
+  margin-right:1vw;
+  border: 2px solid #7D4600;
+  border-radius: 8px;
+}

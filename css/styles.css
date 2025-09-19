@@ -1888,3 +1888,50 @@ margin-right: 0;
 }
 
 }
+
+.contenedor-comentarios {
+    background-color:#f8f8f8;
+    border: 1px solid #7D4600;
+    border-radius: 8px;
+    padding: 2vw;
+    margin-bottom: 3vh;
+    margin-right: 50vw;
+    margin-top: 2vw;
+    background-color: #fff;
+    margin-left: 5vw;
+}
+
+.com-usuario {
+    font-weight: bold;
+    color: #333;
+}
+
+.com-fecha {
+    font-size: 0.8rem;
+    color: #777;
+  
+}
+
+.com-contenido {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.cont-rating {
+    display: flex;
+    gap: 2vw;
+
+}
+
+.cont-rating i {
+    font-size: 1.2rem;
+}
+
+.cont-rating .bi-star-fill {
+    color: #fc7609;
+}
+
+.cont-rating .bi-star {
+    color: #ccc;
+}

@@ -1889,49 +1889,150 @@ margin-right: 0;
 
 }
 
+/* css caja comentarios */
 .contenedor-comentarios {
-    background-color:#f8f8f8;
-    border: 1px solid #7D4600;
-    border-radius: 8px;
-    padding: 2vw;
-    margin-bottom: 3vh;
-    margin-right: 50vw;
-    margin-top: 2vw;
-    background-color: #fff;
-    margin-left: 5vw;
+  background-color:#f8f8f8;
+  border: 1px solid #7D4600;
+  border-radius: 8px;
+  padding: 2vw;
+  margin-bottom: 3vh;
+  margin-right: 50vw;
+  margin-top: 2vw;
+  background-color: #fff;
+  margin-left: 4vw;
 }
 
 .com-usuario {
-    font-weight: bold;
-    color: #333;
+  font-weight: bold;
+  color: #333;
 }
 
 .com-fecha {
-    font-size: 0.8rem;
-    color: #777;
+  font-size: 0.8rem;
+  color: #777;
   
 }
 
 .com-contenido {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
+  font-size: 1rem;
+  color: #555;
 }
 
 .cont-rating {
-    display: flex;
-    gap: 2vw;
+  display: flex;
+  gap: 2vw;
 
 }
 
 .cont-rating i {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .cont-rating .bi-star-fill {
-    color: #fc7609;
+  color: #fc7609;
 }
 
 .cont-rating .bi-star {
-    color: #ccc;
+  color: #ccc;
+}
+
+@media (min-width: 768px){
+
+.contenedor-comentarios {
+  background-color:#f8f8f8;
+  border: 1px solid #7D4600;
+  border-radius: 8px;
+  padding: 2vw;
+  margin-bottom: 3vh;
+  margin-right: 50vw;
+  margin-top: 2vw;
+  background-color: #fff;
+  margin-left: 5vw;
+}
+
+.com-usuario {
+  font-weight: bold;
+  color: #333;
+}
+
+.com-fecha {
+  font-size: 0.8rem;
+  color: #777;
+  
+}
+
+.com-contenido {
+  font-size: 1rem;
+  color: #555;
+}
+
+.cont-rating {
+  display: flex;
+  gap: 2vw;
+
+}
+
+.cont-rating i {
+  font-size: 1.2rem;
+}
+
+.cont-rating .bi-star-fill {
+  color: #fc7609;
+}
+
+.cont-rating .bi-star {
+  color: #ccc;
+}
+
+}
+
+
+@media (max-width: 320px){
+  
+.contenedor-comentarios {
+  background-color:#f8f8f8;
+  border: 1px solid #7D4600;
+  border-radius: 8px;
+  padding: 2vw;
+  margin-bottom: 4vh;
+  margin-right: 5vw;
+  margin-top: 2vw;
+  background-color: #fff;
+  margin-left: 5vw;
+}
+
+.com-usuario {
+  font-weight: bold;
+  color: #333;
+}
+
+.com-fecha {
+  font-size: 0.8rem;
+  color: #777;
+  
+}
+
+.com-contenido {
+  font-size: 1rem;
+  color: #555;
+}
+
+.cont-rating {
+  display: flex;
+  gap: 2vw;
+
+}
+
+.cont-rating i {
+  font-size: 1.2rem;
+}
+
+.cont-rating .bi-star-fill {
+  color: #fc7609;
+}
+
+.cont-rating .bi-star {
+  color: #ccc;
+}  
+
 }

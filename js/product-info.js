@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div id="cont-nuevo-contenido">
                 <label id=contenidoComentario>Comentario:</label>
-                <input id="contenido" type="text" required minlength="1" placeholder="Escribe aquí tu comentario..."  />
+                <textarea id="contenido" type="text" required minlength="1" placeholder="Escribe aquí tu comentario..."></textarea>
             </div>
             <div id="cont-nuevo-rating">
                 <label id=nuevoRating>Tu calificación:</label>

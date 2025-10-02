@@ -1794,175 +1794,7 @@ img.icono-jap-product-info{
   border-radius: 8px;
 }
 
-/* css agregar comentario */
-.contenedor-agregar-comentarios {
-  background-color:#f8f8f8;              
-  border: 2px solid #7D4600;        
-  border-radius: 8px;              
-  padding: 1vw;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
-  max-width: 40vw;                 
-  margin-left:5vw;
-  line-height: 1.4;
-}
-#form-agregar-comentarios {
-  display: grid;
-  gap: 1vw;
-}
 
-.contenedor-agregar-comentarios label {
-  font-weight: 500;
-  display: inline-block;
-  margin-bottom: 4px;
-}
-
-#contenido{
-  width: 100%;
-  background: #d9d9d9;
-  border: 1px solid #8b8b8b;
-  border-radius: 8px;
-  outline: none;
-  height: 8vw;
-  
-}
-     
-
-#cont-enviar {
-  display: flex;
-  justify-content: center;
-}
-
-#cont-enviar #enviar {
-  background: #005EDE;   
-  color: white;
-  border: none;
-  border-radius: 999px;
-  padding: 8px 22px;
-  cursor: pointer;
-}
-
-.btn-enviar:hover {
-  background-color: #012962;
-}
-
-
-@media (min-wigth: 768px){
-
-.contenedor-agregar-comentarios {
-  background-color:#f8f8f8;              
-  border: 2px solid #7D4600;        
-  border-radius: 8px;              
-  padding: 1vw;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
-  max-width: 40vw;                 
-  margin-left: 4vw;
-  line-height: 1.4;
-}
-#form-agregar-comentarios {
-  display: grid;
-  gap: 1vw;
-}
-
-.contenedor-agregar-comentarios label {
-  font-weight: 500;
-  display: inline-block;
-  margin-bottom: 4px;
-}
-
-#contenido{
-  width: 100%;
-  background: #d9d9d9;
-  border: 1px solid #8b8b8b;
-  border-radius: 8px;
-  padding: 10px 12px;
-  outline: none;
-  height: 8vw;
-  
-}
-     
-
-#cont-enviar {
-  display: flex;
-  justify-content: center;
-}
-
-#cont-enviar #enviar {
-  background: #005EDE;   
-  color: white;
-  border: none;
-  border-radius: 999px;
-  padding: 8px 22px;
-  cursor: pointer;
-}
-
-.btn-enviar:hover {
-  background-color: #012962;
-}
-
-#contenido:focus,
-#rating:focus {
-  border-color: black;
-  box-shadow: 0 0 0 2px rgba(168,115,58,.18);
-}
-}
-
-@media (max-width: 320px){
-.contenedor-agregar-comentarios {
-  background-color:#f8f8f8;              
-  border: 2px solid #7D4600;        
-  border-radius: 8px;              
-  padding: 1vw;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
-  max-width: 90vw;                 
-  margin-left: 5vw;
-  line-height: 1.4;
-}
-#form-agregar-comentarios {
-  display: grid;
-  gap: 1vw;
-}
-
-.contenedor-agregar-comentarios label {
-  font-weight: 500;
-  display: inline-block;
-  margin-bottom: 4px;
-}
-
-#contenido{
-  width: 100%;
-  background: #d9d9d9;
-  border: 1px solid #8b8b8b;
-  border-radius: 8px;
-  padding: 10px 12px;
-  outline: none;
-  height: 30vw;
-  
-}
-     
-
-#cont-enviar {
-  display: flex;
-  justify-content: center;
-}
-
-#cont-enviar #enviar {
-  background: #005EDE;   
-  color: white;
-  border: none;
-  border-radius: 999px;
-  padding: 8px 22px;
-  cursor: pointer;
-}
-
-.btn-enviar:hover {
-  background-color: #012962;
-}
-
-.rating-stepper #rating{
-  width: 64px; text-align: center;
-  background:#fff; border:1px solid #8b8b8b; border-radius:8px;
-  padding:6px 8px; font-size:16px;   /* >=16px evita auto-zoom iOS */
-}
 .contenedor-tarjeta-recomendados:hover{
   border: 2px solid #005EDE;
   scale: 1.05;
@@ -1988,7 +1820,7 @@ img.icono-jap-product-info{
   padding-left: 1vw;
   padding-right: 1vw;
 }
-}
+
 @media (min-width: 768px){
 
 .contenedor-tarjeta-recomendados{
@@ -2203,5 +2035,177 @@ margin-right: 0;
 .cont-rating .bi-star {
   color: #ccc;
 }  
+
+}
+
+/* css agregar comentario */
+.contenedor-agregar-comentarios {
+  background-color:#f8f8f8;              
+  border: 2px solid #7D4600;        
+  border-radius: 8px;              
+  padding: 1vw;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
+  max-width: 40vw;                 
+  margin-left:5vw;
+  line-height: 1.4;
+}
+#form-agregar-comentarios {
+  display: grid;
+  gap: 1vw;
+}
+
+.contenedor-agregar-comentarios label {
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+#contenido{
+  width: 100%;
+  background: #d9d9d9;
+  border: 1px solid #8b8b8b;
+  border-radius: 8px;
+  outline: none;
+  height: 8vw;
+  
+}
+     
+
+#cont-enviar {
+  display: flex;
+  justify-content: center;
+}
+
+#cont-enviar #enviar {
+  background: #005EDE;   
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 22px;
+  cursor: pointer;
+}
+
+.btn-enviar:hover {
+  background-color: #012962;
+}
+
+
+@media (min-wigth: 768px){
+
+.contenedor-agregar-comentarios {
+  background-color:#f8f8f8;              
+  border: 2px solid #7D4600;        
+  border-radius: 8px;              
+  padding: 1vw;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
+  max-width: 40vw;                 
+  margin-left: 4vw;
+  line-height: 1.4;
+}
+#form-agregar-comentarios {
+  display: grid;
+  gap: 1vw;
+}
+
+.contenedor-agregar-comentarios label {
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+#contenido{
+  width: 100%;
+  background: #d9d9d9;
+  border: 1px solid #8b8b8b;
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: none;
+  height: 8vw;
+  
+}
+     
+
+#cont-enviar {
+  display: flex;
+  justify-content: center;
+}
+
+#cont-enviar #enviar {
+  background: #005EDE;   
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 22px;
+  cursor: pointer;
+}
+
+.btn-enviar:hover {
+  background-color: #012962;
+}
+
+#contenido:focus,
+#rating:focus {
+  border-color: black;
+  box-shadow: 0 0 0 2px rgba(168,115,58,.18);
+}
+}
+
+@media (max-width: 320px){
+.contenedor-agregar-comentarios {
+  background-color:#f8f8f8;              
+  border: 2px solid #7D4600;        
+  border-radius: 8px;              
+  padding: 1vw;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
+  max-width: 90vw;                 
+  margin-left: 5vw;
+  line-height: 1.4;
+}
+#form-agregar-comentarios {
+  display: grid;
+  gap: 1vw;
+}
+
+.contenedor-agregar-comentarios label {
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+#contenido{
+  width: 100%;
+  background: #d9d9d9;
+  border: 1px solid #8b8b8b;
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: none;
+  height: 30vw;
+  
+}
+     
+
+#cont-enviar {
+  display: flex;
+  justify-content: center;
+}
+
+#cont-enviar #enviar {
+  background: #005EDE;   
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 22px;
+  cursor: pointer;
+}
+
+.btn-enviar:hover {
+  background-color: #012962;
+}
+
+.rating-stepper #rating{
+  width: 64px; text-align: center;
+  background:#fff; border:1px solid #8b8b8b; border-radius:8px;
+  padding:6px 8px; font-size:16px;   /* >=16px evita auto-zoom iOS */
+}
 
 }

@@ -134,6 +134,7 @@ filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
   margin-left: 0.25vw;
   margin-right: 0.25vw;
   border-radius: 15px;
+
 }
 
 .filtro-precio-input{
@@ -429,6 +430,10 @@ border: none;
         grid-row: 2;
         position: relative;
         left:5vw;
+      }
+
+      #botones-filtros{
+        padding-top: 15vh;
       }
 
       .botones-filtros{
@@ -1933,5 +1938,148 @@ margin-right: 0;
 }
 
 .cont-rating .bi-star {
+<<<<<<< Updated upstream
     color: #ccc;
 }
+=======
+  color: #ccc;
+}
+
+
+@media (min-width: 768px){
+
+.contenedor-comentarios {
+  background-color:#f8f8f8;
+  border: 1px solid #7D4600;
+  border-radius: 8px;
+  padding: 2vw;
+  margin-bottom: 3vh;
+  margin-right: 50vw;
+  margin-top: 2vw;
+  background-color: #fff;
+  margin-left: 5vw;
+}
+
+.com-usuario {
+  font-weight: bold;
+  color: #333;
+}
+
+.com-fecha {
+  font-size: 0.8rem;
+  color: #777;
+  
+}
+
+.com-contenido {
+  font-size: 1rem;
+  color: #555;
+}
+
+.cont-rating {
+  display: flex;
+  gap: 2vw;
+
+}
+
+.cont-rating i {
+  font-size: 1.2rem;
+}
+
+.cont-rating .bi-star-fill {
+  color: #fc7609;
+}
+
+.cont-rating .bi-star {
+  color: #ccc;
+}
+
+}
+
+@media (max-width: 320px){
+  
+.contenedor-comentarios {
+  background-color:#f8f8f8;
+  border: 1px solid #7D4600;
+  border-radius: 8px;
+  padding: 2vw;
+  margin-bottom: 4vh;
+  margin-right: 5vw;
+  margin-top: 2vw;
+  background-color: #fff;
+  margin-left: 5vw;
+}
+
+.com-usuario {
+  font-weight: bold;
+  color: #333;
+}
+
+.com-fecha {
+  font-size: 0.8rem;
+  color: #777;
+  
+}
+
+.com-contenido {
+  font-size: 1rem;
+  color: #555;
+}
+
+.cont-rating {
+  display: flex;
+  gap: 2vw;
+
+}
+
+.cont-rating i {
+  font-size: 1.2rem;
+}
+
+.cont-rating .bi-star-fill {
+  color: #fc7609;
+}
+
+.cont-rating .bi-star {
+  color: #ccc;
+}  
+
+}
+/* style boton  */
+
+body.dark {
+  --color-fondo: #121212;
+  --color-texto: #ffffff;
+  --color-header: #1e1e1e;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+body.dark .card,
+body.dark .list-group-item,
+body.dark .container,
+body.dark .item,
+body.dark .box,
+body.dark .category,
+body.dark .content {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  border-color: #333 !important;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark p,
+body.dark span {
+  color: #ffffff !important;
+}
+>>>>>>> Stashed changes

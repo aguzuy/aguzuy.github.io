@@ -39,3 +39,14 @@ let getJSONData = function(url){
         return result;
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const modoGuardado = localStorage.getItem('modo');
+
+  if (modoGuardado === 'dark') {
+    document.body.classList.add('dark');
+  } else {
+    document.body.classList.add('light');
+  }
+});

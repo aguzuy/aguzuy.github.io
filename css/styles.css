@@ -110,16 +110,30 @@ filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
   grid-template-columns: 90% auto 0;
 }
 
+#botonModo{
+  display: flex;
+  margin-top: -1vw;
+  margin-left: -1vw;
+  width: 3.5vw;
+  height: auto;
+}
+
+.container{
+  padding-bottom: 2vw;
+}
+
+
 #botones-filtros{
   display: flex;
   grid-column: 2;
   grid-row: 1;
+  margin-top: 5vh;
 }
 
 #cont-filtro-precio{
   grid-column: 2;
   grid-row: 1;
-  margin-top: 6.5vh;
+  margin-top: 10vh;
 }
 
 #contenedor-main-tarjetas{
@@ -160,7 +174,7 @@ filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
 #cont-filtro-busq{
   grid-column: 2;
   grid-row: 1;
-  margin-top: 27vh;
+  margin-top: 32vh;
 }
 #busqueda{
   width:85%;
@@ -1938,10 +1952,6 @@ margin-right: 0;
 }
 
 .cont-rating .bi-star {
-<<<<<<< Updated upstream
-    color: #ccc;
-}
-=======
   color: #ccc;
 }
 
@@ -2082,4 +2092,3 @@ body.dark p,
 body.dark span {
   color: #ffffff !important;
 }
->>>>>>> Stashed changes

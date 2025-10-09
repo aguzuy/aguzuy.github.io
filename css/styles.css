@@ -112,14 +112,14 @@ filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
 
 #botonModo{
   display: flex;
-  margin-top: -1vw;
+  margin-top: -3vw;
   margin-left: -1vw;
   width: 3.5vw;
   height: auto;
 }
 
 .container{
-  padding-bottom: 2vw;
+  padding: 2vw;
 }
 
 
@@ -127,13 +127,13 @@ filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
   display: flex;
   grid-column: 2;
   grid-row: 1;
-  margin-top: 5vh;
+  margin-top: 1vh;
 }
 
 #cont-filtro-precio{
   grid-column: 2;
   grid-row: 1;
-  margin-top: 10vh;
+  margin-top: 6.5vh;
 }
 
 #contenedor-main-tarjetas{
@@ -174,7 +174,7 @@ filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
 #cont-filtro-busq{
   grid-column: 2;
   grid-row: 1;
-  margin-top: 32vh;
+  margin-top: 28vh;
 }
 #busqueda{
   width:85%;

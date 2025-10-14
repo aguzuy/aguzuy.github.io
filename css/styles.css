@@ -2209,3 +2209,265 @@ margin-right: 0;
 }
 
 }
+
+/*  my-profile */
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  
+}
+.navbar {
+  margin-bottom: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-dark.bg-dark {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.profile-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+/* izquierda */
+.left-panel {
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #F7A350;
+}
+
+.update-btn {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/*  derecha */
+.right-panel {
+  flex: 1;
+  background-color: #F7A350;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  max-width: 350px;
+}
+
+label {
+  margin-top: 10px;
+  color: #fff;
+  font-weight: 600;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  margin-top: 3px;
+}
+
+.save-btn {
+  background-color: #004AAD;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+@media  (max-width: 1024px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    background-color: #ffffff; 
+    padding: 20px 0;
+  }
+
+  .left-panel {
+    width: 100%;
+    background-color: transparent; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .right-panel {
+    width: 100%;
+    background-color: transparent; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    background-color: #E68A2E;
+    padding: 25px;
+    border-radius: 12px;
+    width:80%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  label {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid #D97B0F;
+    
+  }
+
+  .update-btn {
+    background-color: #1E63D3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    margin-top: 15px;
+    
+  }
+
+  .save-btn {
+    background-color: #004AAD;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 10px;
+    
+}
+}
+
+@media (max-width: 320px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #ffffff; 
+    height: auto;
+    padding: 20px 0;
+  }
+
+  
+  .left-panel {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  
+  .right-panel {
+    width: 100%;
+    background-color: transparent; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  form {
+    background-color: #E68A2E; 
+    padding: 20px;
+    border-radius: 12px;
+    width: 85%;
+    max-width: 360px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  label {
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    margin-top: 5px;
+  }
+
+
+  .update-btn {
+    background-color: #1E63D3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+  .right-panel form .save-btn {
+  display: block !important;       /* fuerza bloque centrado */
+  width: 100% !important;          /* igual ancho que los inputs */
+  margin: 20px 0 10px 0 !important; /* margen arriba y abajo */
+  background-color: #004AAD !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+  text-align: center;
+  
+  
+}
+
+.right-panel form .save-btn:hover {
+  background-color: #00368d !important;
+}
+
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #D97B0F;
+    object-fit: cover;
+  }
+}
+

@@ -23,3 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const user = localStorage.getItem("userEmail");
+  if (user) {
+    document.getElementById("usernameDisplay").textContent = user.split("@")[0];
+  }
+});
+

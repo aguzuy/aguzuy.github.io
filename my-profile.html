@@ -39,24 +39,9 @@
           <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="categories.html">Categorías</a></li>
           <li class="nav-item"><a class="nav-link" href="sell.html">Vender</a></li>
-
-          <!-- Menú de usuario -->
-          <li class="nav-item dropdown ms-auto">
-            <a class="nav-link dropdown-toggle" href="#" id="userMenu" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <span id="userDisplay">Usuario</span>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
-              <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
-              <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="login.html" id="logoutBtn">Cerrar sesión</a></li>
-            </ul>
           </li>
         </ul>
-          <span id="usuario" class="navbar-text usuario ms-auto ml-auto"></span>
+          <span id="user" class="navbar-text usuario ms-auto ml-auto"></span>
        </div>
     </div>
   </nav>
@@ -76,7 +61,7 @@
         <input type="text" id="apellido" required>
 
         <label for="user">Usuario:</label>
-        <input type="text" id="user" readonly>
+        <input type="text" id="user" >
 
         <label for="telefono">Teléfono:</label>
         <input type="tel" id="telefono">

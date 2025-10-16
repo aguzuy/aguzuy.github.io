@@ -17,16 +17,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Si los campos tienen algo, iniciamos "sesión"
     sessionStorage.setItem("isLoggedIn", "true");
-    sessionStorage.setItem("usuario", usuario);
+    localStorage.setItem("usuario", usuario);
 
     window.location.href = "index.html"; //Redirigir al index
   });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const user = localStorage.getItem("userEmail");
-  if (user) {
-    document.getElementById("usernameDisplay").textContent = user.split("@")[0];
-  }
-});
+  const user = localStorage.getItem("usuario");
+  const usernameDisplay = document.getElementById("usernameDisplay");
+  
+})
+
+
 

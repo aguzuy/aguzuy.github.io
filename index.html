@@ -23,23 +23,7 @@
           <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="categories.html">Categorías</a></li>
           <li class="nav-item"><a class="nav-link" href="sell.html">Vender</a></li>
-
-          <!-- Menú de usuario -->
-          <li class="nav-item dropdown ms-auto">
-            <a class="nav-link dropdown-toggle" href="#" id="userMenu" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <span id="userDisplay">Usuario</span>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
-              <li><a class="dropdown-item" href="my-profile.html">Mi perfil</a></li>
-              <li><a class="dropdown-item" href="cart.html">Mi carrito</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="login.html" id="logoutBtn">Cerrar sesión</a></li>
-            </ul>
-          </li>
-        </ul>
+        </ul> 
           <span id="usuario" class="navbar-text usuario ms-auto ml-auto"></span>
        </div>
     </div>
@@ -105,10 +89,8 @@
   <script src="js/index.js"></script>
   <script src="js/init.js"></script>
   <script src="js/login-guardado.js"></script>
-
-
-  
-            
+  <script src="js/login.js"></script>
+           
   <script>
   // Apenas abre el index, revisa si hay sesión
   if (!sessionStorage.getItem("isLoggedIn")) {

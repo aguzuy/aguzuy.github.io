@@ -19,6 +19,14 @@ nav a {
   text-decoration: none;
 }
 
+#usuarioIndex{
+  background-color: #212529;
+  max-width: fit-content;
+  border:none;
+  color: white;
+  font-size: 19px;
+}
+
 .nav-link{
 color: white;
 }
@@ -2108,7 +2116,7 @@ margin-right: 0;
 }
 
 
-@media (min-wigth: 768px){
+@media (min-width: 768px){
 
 .contenedor-agregar-comentarios {
   background-color:#f8f8f8;              
@@ -2265,3 +2273,17 @@ body.dark span {
   color: #ffffff !important;
 }
 
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}

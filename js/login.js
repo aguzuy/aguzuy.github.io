@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("loginForm");
   if (!form) return;
@@ -22,12 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "index.html"; //Redirigir al index
   });
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const user = localStorage.getItem("usuario");
-  const usernameDisplay = document.getElementById("usernameDisplay");
-  
-})
 
 
 

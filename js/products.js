@@ -71,10 +71,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonReg = document.getElementById("botonRegistro");
 
     if (isLoggedIn) {
-        userDiv.innerHTML = `${sessionStorage.getItem("usuario")}
+        userDiv.innerHTML = `${localStorage.getItem("usuario")}
         <img class="imagenUsuario" src="img/usuarioPerfil.png" alt="Imagen Usuario">
         `; //muestra el nombre y la imagen
-        userDiv.href= "#"; 
+        userDiv.href= "my-profile.html"; 
         botonReg.style.display= "none"; //esconde btn registro
     }
 

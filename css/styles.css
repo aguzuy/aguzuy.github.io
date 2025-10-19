@@ -118,12 +118,14 @@ filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
   grid-template-columns: 90% auto 0;
 }
 
-#botonModo{
+#botonNaranjaModoOscuro{
   display: flex;
+  color: #E98119;
   margin-top: -3vw;
   margin-left: -1vw;
   width: 3.5vw;
   height: auto;
+  cursor: pointer;
 }
 
 .container{
@@ -2235,9 +2237,18 @@ margin-right: 0;
 }
 
 }
+
+/*Modo Claro/Oscuro*/
+
+.bodyDark {
+  background-color: #121212;
+  color: #FFFFFF;
+  transition: all 1s ease;
+}
+
 /* style boton  */
 
-body.dark {
+/*body.dark {
   --color-fondo: #121212;
   --color-texto: #ffffff;
   --color-header: #1e1e1e;
@@ -2247,30 +2258,6 @@ body {
   background-color: var(--color-fondo);
   color: var(--color-texto);
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-
-body.dark .card,
-body.dark .list-group-item,
-body.dark .container,
-body.dark .item,
-body.dark .box,
-body.dark .category,
-body.dark .content {
-  background-color: #1e1e1e !important;
-  color: #ffffff !important;
-  border-color: #333 !important;
-}
-
-body.dark h1,
-body.dark h2,
-body.dark h3,
-body.dark h4,
-body.dark h5,
-body.dark h6,
-body.dark p,
-body.dark span {
-  color: #ffffff !important;
 }
 
 .bd-placeholder-img {
@@ -2286,4 +2273,157 @@ body.dark span {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
+}*/
+
+/* My Profile */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedorPrincipalMyProfile {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+}
+
+#ladoIzquierdo {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+#ladoDerecho {
+  display: flex;
+  flex: 1;
+  background-color: #e98119;
+  padding: 30px;
+  justify-content: center;
+}
+
+#flechaBack {
+  display: flex;
+  width: 5vw;
+  height: 5vw;
+  justify-content: flex-start;
+}
+
+.fotoDePerfil {
+  display: flex;
+  width: 22vw;
+  height: 22vw;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 50px;
+  border: #7D4600;
+  border-style: solid;
+  border-width: 1px;
+  justify-content: center;
+}
+
+#botonActualizarFoto {
+  display: flex;
+  font-size: 1.5vw;
+  background-color: #005EDE;
+  border: #005EDE;
+  color: white;
+  border-radius: 6px;
+  height: 6ch;
+  width: 17vw;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info {
+  color: #fff;
+  margin-top: 8px;
+  font-size: 16px;
+  display: block;
+}
+
+.dato-perfil {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  display: block;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+#infoForm {
+  margin: 0%;
+  padding: 0%;
+}
+
+#usuarioEmail {
+  font-size: 1.5vw;
+}
+
+#botonActualizarCambios {
+  font-size: 1.5vw;
+  background-color: #005EDE;
+  border: #005EDE;
+  color: white;
+  border-radius: 6px;
+  height: 6ch;
+  width: 17vw;
+  justify-content: center;
+  margin: 0%;
+  margin-top: 39%;
+}
+
+#botonBlancoModoOscuro {
+  display: flex;
+  color: #FFFFFF;
+  width: 4vw;
+  height: 4vw;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0%;
+  margin-right: 0%;
+  cursor: pointer;
+}
+
+#toggle {
+  display: none;
+}
+
+.logoJaPMyProfile {
+  width: 17vw;
+  align-self: flex-start;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+/* My Profile Celular */
+
+@media (max-width: 320px) {
+  
+
+
+}
+
+/* My Profile Tablet */
+
+@media (max-width: 768px) {
+
+  #botonBlancoModoOscuro {
+    color: #E98119;
+  }
+
 }

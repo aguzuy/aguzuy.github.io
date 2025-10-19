@@ -145,19 +145,3 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* Modo uscuro */
-document.addEventListener("DOMContentLoaded", function() {
-  const boton = document.getElementById('botonModo');
-
-  if (boton) {
-    boton.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      document.body.classList.toggle('light');
-
-      const modo = document.body.classList.contains('dark') ? 'dark' : 'light';
-      localStorage.setItem('modo', modo);
-    });
-  }
-});
-
-
-

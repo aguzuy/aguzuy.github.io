@@ -27,5 +27,3 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById("botonActualizarCambios").addEventListener("click", () => {
     guardarCambios();
 });
-
-/* Modo uscuro */

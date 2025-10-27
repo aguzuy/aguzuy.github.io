@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 const email = localStorage.getItem("usuario");
 const usuarioEmail = document.getElementById("usuarioEmail");
 const usuarioNombre = document.getElementById("usuarioNombre");
@@ -30,4 +29,3 @@ document.getElementById("botonActualizarCambios").addEventListener("click", () =
     guardarCambios();
 });
 
->>>>>>> Stashed changes

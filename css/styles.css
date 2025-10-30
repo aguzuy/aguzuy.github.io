@@ -346,6 +346,12 @@ label {
   color: var(--text-color);
 }
 
+#labelToggleinfo{
+  position: fixed;
+  top: 12vh;
+  right: 1vw;
+}
+
 /* hacer que se muestren de a 3 */
 
 
@@ -2749,9 +2755,9 @@ display: block;
 }
 
 #botonModo {
-  display: block;
-  height: 4vh;
-  color: #fc7609;
+  position:fixed;
+  top: 1vh;
+  right: 1vw;
 }  
 
 .logoJaPMyProfile {

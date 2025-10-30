@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const contenedor = document.getElementById("contenedor-prin");
     const contenedorRecs = document.getElementById("contenedor-prin-recs");
     const contenedorComs = document.getElementById("contenedor-prin-comentarios");
+    const contenedorAgregarComs = document.getElementById("contenedor-prin-agregar-comentarios");
+    let comNuevos= JSON.parse(sessionStorage.getItem("arrayComsNuevos") || "[]");
+    let union = [];
 
     fetch ("https://japceibal.github.io/emercado-api/products/" + prodID + ".json")
     .then (response => {
@@ -101,13 +104,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonReg = document.getElementById("botonRegistro");
     
     if (isLoggedIn) {
-        userDiv.innerHTML = `${sessionStorage.getItem("usuario")}
+        userDiv.innerHTML = `${localStorage.getItem("usuario")}
         <img class="imagenUsuario" src="img/usuarioPerfil.png" alt="Imagen Usuario">
         `; //muestra el nombre y la imagen
-        userDiv.href= "#"; 
+        userDiv.href= "my-profile.html"; 
         botonReg.style.display= "none"; //esconde btn registro
     }
     
+
+
     //aca comentarios
     fetch ("https://japceibal.github.io/emercado-api/products_comments/" + prodID + ".json")
     .then (response => {
@@ -117,11 +122,19 @@ document.addEventListener("DOMContentLoaded", () => {
         return response.json();
     })
     .then (comments=>{
-        mostrarComentarios(comments);
+        const arrayComs = sessionStorage.getItem("arrayComsNuevos");
+        union = comments.concat(JSON.parse(arrayComs || "[]")).filter(c => String(c.product) === String(prodID));;
+        if (isLoggedIn) {
+            agregarComentario();
+        } else {
+            errorAgregarUsuario();
+        }
+        mostrarComentarios(union);
+        escuchar();
     })
 
     function mostrarComentarios(comentarios){
-        contenedorComs.innerHTML = "";
+        contenedorComs.innerHTML = ``;
         comentarios.forEach(com => {
         const caja= document.createElement("div");
 
@@ -149,5 +162,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
             contenedorComs.appendChild(caja);
         })
+    }
+
+    function errorAgregarUsuario(){
+        const caja= document.createElement("div");
+        caja.className = "contenedor-error";
+        caja.innerHTML=`
+        <h5 class="aviso-loggeo">Necesitas estar loggeado para dejar un comentario.</h5>
+        <a id="irLogin" href="login.html">Login</a>
+        `
+        contenedorAgregarComs.appendChild(caja);
+    }
+    function agregarComentario(){
+        const caja= document.createElement("div");
+        caja.className = "contenedor-agregar-comentarios";
+        caja.innerHTML=`
+        <form id="form-agregar-comentarios">
+            <div id="cont-nuevo-usuario">
+                <label id=nombreUsuario>Nombre: ${sessionStorage.getItem("usuario")}</label>
+            </div>
+            <div id="cont-nuevo-contenido">
+                <label id=contenidoComentario>Comentario:</label>
+                <textarea id="contenido" type="text" required minlength="1" placeholder="Escribe aquí tu comentario..."></textarea>
+            </div>
+            <div id="cont-nuevo-rating">
+                <label id=nuevoRating>Tu calificación:</label>
+                <input id="rating" type="number" min="0" max="5" step="1" required />
+            </div>
+            <div id="cont-enviar">
+                <button id="enviar">Publicar</button>
+            </div>
+        </form>    
+        `
+        contenedorAgregarComs.appendChild(caja);
+    }
+    function escuchar(){
+        if (isLoggedIn) {
+            const formEnviar = document.getElementById("form-agregar-comentarios");
+                
+            formEnviar.addEventListener("submit", (e) => {
+                e.preventDefault();
+                const contenidoNuevo = document.getElementById("contenido").value.toString().trim();
+                const calificacionNueva = document.getElementById("rating").value;
+                const tiempo = new Date(new Date() - new Date().getTimezoneOffset()*60000).toISOString().slice(0,19).replace('T',' ');
+
+                comNuevos.push({
+                    product: prodID,
+                    score: calificacionNueva,
+                    description: contenidoNuevo,
+                    user: sessionStorage.getItem("usuario"),
+                    dateTime: tiempo
+                });
+                sessionStorage.setItem("arrayComsNuevos", JSON.stringify(comNuevos));
+                alert("¡Comentario publicado con exito!");
+                window.location.href="product-info.html";
+            })
+            mostrarComentarios(union);
+        }
     }
  })

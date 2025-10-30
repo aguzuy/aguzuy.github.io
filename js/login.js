@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("loginForm");
   if (!form) return;
@@ -17,9 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Si los campos tienen algo, iniciamos "sesión"
     sessionStorage.setItem("isLoggedIn", "true");
-    sessionStorage.setItem("usuario", usuario);
+    localStorage.setItem("usuario", usuario);
 
     window.location.href = "index.html"; //Redirigir al index
   });
 });
+
+
 

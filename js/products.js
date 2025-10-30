@@ -71,10 +71,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonReg = document.getElementById("botonRegistro");
 
     if (isLoggedIn) {
-        userDiv.innerHTML = `${sessionStorage.getItem("usuario")}
+        userDiv.innerHTML = `${localStorage.getItem("usuario")}
         <img class="imagenUsuario" src="img/usuarioPerfil.png" alt="Imagen Usuario">
         `; //muestra el nombre y la imagen
-        userDiv.href= "#"; 
+        userDiv.href= "my-profile.html"; 
         botonReg.style.display= "none"; //esconde btn registro
     }
 
@@ -145,19 +145,3 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* Modo uscuro */
-document.addEventListener("DOMContentLoaded", function() {
-  const boton = document.getElementById('botonModo');
-
-  if (boton) {
-    boton.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      document.body.classList.toggle('light');
-
-      const modo = document.body.classList.contains('dark') ? 'dark' : 'light';
-      localStorage.setItem('modo', modo);
-    });
-  }
-});
-
-
-

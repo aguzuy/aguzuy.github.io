@@ -1,4 +1,3 @@
-
 const email = localStorage.getItem("usuario");
 const usuarioEmail = document.getElementById("usuarioEmail");
 const usuarioNombre = document.getElementById("usuarioNombre");

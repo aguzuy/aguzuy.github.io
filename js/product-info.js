@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return response.json();
     })
-    
-     .then(data => {
+   
+    .then(data => {
   mostrarProducto(data);
   mostrarRecomendados(data);
 
@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const contenedor = modalEl.querySelector(".modal-body");
   const btnComprar = document.getElementById("btnComprar");
 
+  // 🔹 No borra el carrito cada vez que carga
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
   botonAgregar.addEventListener("click", () => {
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       costo: data.cost,
       moneda: data.currency,
       cantidad: 1,
-      imagen: data.images?.[0] || "img/default.png",
+      imagen: data.images[0],
       subtotal: data.cost
     };
     carrito.push(producto);
@@ -45,22 +46,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function renderizar() {
-    contenedor.innerHTML = `<h5>Carrito de compras</h5>` + carrito.map((p, i) => `
-      <div class="producto-item">
-        <hr>
-        <img src="${p.imagen}" style="width:70px;border-radius:10px">
-        <p><strong>${p.nombre}</strong> - ${p.costo} ${p.moneda}</p>
-        <p>Cantidad: 
-          <input type="number" min="1" value="${p.cantidad}" data-i="${i}" class="cant form-control w-25 d-inline-block">
-        </p>
-        <p>Subtotal: ${p.subtotal}</p>
-      </div>
-    `).join("");
+    contenedor.innerHTML = `
+      <h5>Carrito de compras</h5>
+      ${carrito.map((p, i) => `
+        <div class="producto-item">
+          <hr>
+          <img src="${p.imagen}" style="width:70px;border-radius:10px">
+          <p><strong>Nombre:</strong> ${p.nombre}</p>
+          <p><strong>Costo:</strong> ${p.costo}</p>
+          <p><strong>Moneda:</strong> ${p.moneda}</p>
+          <p><strong>Cantidad:</strong> 
+            <input type="number" min="1" value="${p.cantidad}" data-i="${i}" class="cant form-control w-25 d-inline-block">
+          </p>
+          <p><strong>Subtotal:</strong> ${p.subtotal}</p>
+        </div>
+      `).join("")}
+    `;
 
     contenedor.querySelectorAll(".cant").forEach(input => {
       input.addEventListener("input", e => {
         const i = e.target.dataset.i;
-        carrito[i].cantidad = +e.target.value || 1;
+        carrito[i].cantidad = parseInt(e.target.value) || 1;
         carrito[i].subtotal = carrito[i].costo * carrito[i].cantidad;
         localStorage.setItem("carrito", JSON.stringify(carrito));
         renderizar();

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return response.json();
     })
-
+    
      .then(data => {
   mostrarProducto(data);
   mostrarRecomendados(data);
@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const contenedor = modalEl.querySelector(".modal-body");
   const btnComprar = document.getElementById("btnComprar");
 
-  // NO borrar el carrito aquí — así no se pierden los productos
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
   botonAgregar.addEventListener("click", () => {
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       costo: data.cost,
       moneda: data.currency,
       cantidad: 1,
-      imagen: data.images[0],
+      imagen: data.images?.[0] || "img/default.png",
       subtotal: data.cost
     };
     carrito.push(producto);
@@ -50,20 +49,18 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="producto-item">
         <hr>
         <img src="${p.imagen}" style="width:70px;border-radius:10px">
-        <p><strong>Nombre:</strong> ${p.nombre}</p>
-        <p><strong>Costo:</strong> ${p.costo}</p>
-        <p><strong>Moneda:</strong> ${p.moneda}</p>
-        <p><strong>Cantidad:</strong> 
+        <p><strong>${p.nombre}</strong> - ${p.costo} ${p.moneda}</p>
+        <p>Cantidad: 
           <input type="number" min="1" value="${p.cantidad}" data-i="${i}" class="cant form-control w-25 d-inline-block">
         </p>
-        <p><strong>Subtotal:</strong> ${p.subtotal}</p>
+        <p>Subtotal: ${p.subtotal}</p>
       </div>
     `).join("");
 
     contenedor.querySelectorAll(".cant").forEach(input => {
       input.addEventListener("input", e => {
         const i = e.target.dataset.i;
-        carrito[i].cantidad = parseInt(e.target.value) || 1;
+        carrito[i].cantidad = +e.target.value || 1;
         carrito[i].subtotal = carrito[i].costo * carrito[i].cantidad;
         localStorage.setItem("carrito", JSON.stringify(carrito));
         renderizar();
@@ -76,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "cart.html";
   });
 });
+
 
     function mostrarProducto(data){
         const caja= document.createElement("div");

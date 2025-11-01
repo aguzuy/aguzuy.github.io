@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return response.json();
     })
-   
-   // 🔹 Limpia el carrito solo una vez por sesión (al abrir el sitio)
 
 .then(data => {
   mostrarProducto(data);
@@ -26,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   sessionStorage.setItem("carritoIniciado", "true");
 }
 
-
   const botonAgregar = document.querySelector(".btn-agregar");
   if (!botonAgregar || botonAgregar.dataset.listener === "true") return;
   botonAgregar.dataset.listener = "true"; // evita duplicar eventos
@@ -36,12 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const contenedor = modalEl.querySelector(".modal-body");
   const btnComprar = document.getElementById("btnComprar");
 
-  // 🔹 Carga el carrito guardado (si existe)
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-  // 🔹 Renderiza el carrito apenas carga la página (para mostrar los productos previos)
   renderizar();
-
   botonAgregar.addEventListener("click", () => {
     const producto = {
       nombre: data.name,

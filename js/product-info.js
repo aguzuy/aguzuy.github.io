@@ -15,20 +15,32 @@ document.addEventListener("DOMContentLoaded", () => {
         return response.json();
     })
    
-    .then(data => {
+   // 🔹 Limpia el carrito solo una vez por sesión (al abrir el sitio)
+
+.then(data => {
   mostrarProducto(data);
   mostrarRecomendados(data);
 
+  if (!sessionStorage.getItem("carritoIniciado")) {
+  localStorage.removeItem("carrito");
+  sessionStorage.setItem("carritoIniciado", "true");
+}
+
+
   const botonAgregar = document.querySelector(".btn-agregar");
-  if (!botonAgregar) return;
+  if (!botonAgregar || botonAgregar.dataset.listener === "true") return;
+  botonAgregar.dataset.listener = "true"; // evita duplicar eventos
 
   const modalEl = document.getElementById("exampleModal");
   const modal = new bootstrap.Modal(modalEl);
   const contenedor = modalEl.querySelector(".modal-body");
   const btnComprar = document.getElementById("btnComprar");
 
-  // 🔹 No borra el carrito cada vez que carga
+  // 🔹 Carga el carrito guardado (si existe)
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  // 🔹 Renderiza el carrito apenas carga la página (para mostrar los productos previos)
+  renderizar();
 
   botonAgregar.addEventListener("click", () => {
     const producto = {
@@ -48,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderizar() {
     contenedor.innerHTML = `
       <h5>Carrito de compras</h5>
+      ${carrito.length === 0 ? "<p>El carrito está vacío.</p>" : ""}
       ${carrito.map((p, i) => `
         <div class="producto-item">
           <hr>

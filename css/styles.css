@@ -2769,3 +2769,102 @@ display: block;
 
 }
 }
+
+.modal-content {
+  background-color: #1e1e1e;
+  color: #040404;
+  border-radius: 15px;
+  border: 2px solid #F58F29;
+}
+
+.modal-header {
+  background-color: #F58F29;
+  color: #ffffff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.modal-body {
+  background-color: #fffdfd;
+}
+
+.modal-footer {
+  background-color: #F58F29;
+}
+
+.btn-close-white {
+  filter: invert(1);
+}
+
+.btn-secondary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #0056b3;
+}
+
+.cantidad-input {
+  border: 1px solid #F58F29;
+  border-radius: 10px;
+  padding: 4px 8px;
+  width: 80px;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.cantidad-input:focus {
+  border-color: #ffb55c;
+  box-shadow: 0 0 4px rgba(245, 143, 41, 0.4);
+}
+
+.modal-content {
+  background-color: #1e1e1e;
+  color: #040404;
+  border-radius: 1vw;
+  border: 0.2vw solid #F58F29;
+}
+
+.modal-header {
+  background-color: #F58F29;
+  color: #ffffff;
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+  padding: 1vw 2vw;
+}
+
+.modal-body {
+  background-color: #fffdfd;
+  padding: 2vw;
+}
+
+.modal-footer {
+  background-color: #F58F29;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1vw;
+  padding: 1vw 2vw;
+}
+
+.btn-close-white {
+  filter: invert(1);
+}
+
+.btn-secondary {
+  background-color: #007bff;
+  border: none;
+  font-size: 1vw;
+  padding: 0.6vw 1.2vw;
+  border-radius: 0.8vw;
+}
+
+.btn-secondary:hover {
+  background-color: #0056b3;
+}
+
+#btnComprar {
+    order: -1; /* Mueve el botón a la izquierda */
+  }

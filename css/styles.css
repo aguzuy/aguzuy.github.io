@@ -2884,3 +2884,34 @@ display: block;
   border-radius: 2vh;
   margin-right: 2vw;
 }
+
+.btn-eliminar {
+  background-color: #f7a350;
+  color: white;
+  border: none;
+  padding: 2vh 5vh;
+  border-radius: 1vh;
+  font-size: 2vh;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-eliminar:hover {
+  background-color: #f59c3b;
+}
+
+.btn-comprar {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 2vh 5vh;
+  border-radius: 1vh;
+  font-size: 2vh;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+  margin: 4vh auto;
+}
+.btn-comprar:hover {
+  background-color: #0056b3;
+}
+

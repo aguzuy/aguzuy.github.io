@@ -19,73 +19,31 @@ document.addEventListener("DOMContentLoaded", () => {
   mostrarProducto(data);
   mostrarRecomendados(data);
 
-  if (!sessionStorage.getItem("carritoIniciado")) {
-  localStorage.removeItem("carrito");
-  sessionStorage.setItem("carritoIniciado", "true");
-}
+})
 
-  const botonAgregar = document.querySelector(".btn-agregar");
-  if (!botonAgregar || botonAgregar.dataset.listener === "true") return;
-  botonAgregar.dataset.listener = "true"; // evita duplicar eventos
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("btn-agregar")) {
+    const nombre = document.getElementById("nombreProducto").textContent;
+    const costo = parseFloat(document.getElementById("precio").textContent);
+    const moneda = document.getElementById("precio").textContent.split(" ")[1];
+    const imagen = document.querySelector(".carousel-slide.active img").src;
 
-  const modalEl = document.getElementById("exampleModal");
-  const modal = new bootstrap.Modal(modalEl);
-  const contenedor = modalEl.querySelector(".modal-body");
-  const btnComprar = document.getElementById("btnComprar");
-
-  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-  renderizar();
-  botonAgregar.addEventListener("click", () => {
     const producto = {
-      nombre: data.name,
-      costo: data.cost,
-      moneda: data.currency,
+      nombre,
+      imagen,
+      costo,
+      moneda,
       cantidad: 1,
-      imagen: data.images[0],
-      subtotal: data.cost
+      subtotal: costo
     };
+
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     carrito.push(producto);
     localStorage.setItem("carrito", JSON.stringify(carrito));
-    renderizar();
-    modal.show();
-  });
 
-  function renderizar() {
-    contenedor.innerHTML = `
-      <h5>Carrito de compras</h5>
-      ${carrito.length === 0 ? "<p>El carrito está vacío.</p>" : ""}
-      ${carrito.map((p, i) => `
-        <div class="producto-item">
-          <hr>
-          <img src="${p.imagen}" style="width:70px;border-radius:10px">
-          <p><strong>Nombre:</strong> ${p.nombre}</p>
-          <p><strong>Costo:</strong> ${p.costo}</p>
-          <p><strong>Moneda:</strong> ${p.moneda}</p>
-          <p><strong>Cantidad:</strong> 
-            <input type="number" min="1" value="${p.cantidad}" data-i="${i}" class="cant form-control w-25 d-inline-block">
-          </p>
-          <p><strong>Subtotal:</strong> ${p.subtotal}</p>
-        </div>
-      `).join("")}
-    `;
-
-    contenedor.querySelectorAll(".cant").forEach(input => {
-      input.addEventListener("input", e => {
-        const i = e.target.dataset.i;
-        carrito[i].cantidad = parseInt(e.target.value) || 1;
-        carrito[i].subtotal = carrito[i].costo * carrito[i].cantidad;
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-        renderizar();
-      });
-    });
+    alert("Producto agregado al carrito correctamente");
   }
-
-  btnComprar.addEventListener("click", () => {
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    window.location.href = "cart.html";
-  });
 });
-
 
     function mostrarProducto(data){
         const caja= document.createElement("div");

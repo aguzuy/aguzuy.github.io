@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="contenedorDerechaAbajo">
                     <h1 id="precio">${data.cost} ${data.currency}</h1>
                     <p id="cantVendidos">Vendidos: ${data.soldCount}</p>
-                    <button class="btn-agregar">Agregar</button>
+                    <button class="btn btn-agregar">Comprar</button>
                 </div>
             </div>
             <div class="contenedorInferior">
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="card-body">
                     <div class="titulo-recomendados">
                         <h5 class="card-title">${item.name}</h5>
-                        <a href="#" class="btn btn-primary btn-sm btnAgregarRec" data-id="${item.id}">Agregar</a>
+                        <a href="#" class="btn btn-primary btn-sm btnAgregarRec" data-id="${item.id}">Más info</a>
                     </div>
                 </div>
             </div>

@@ -24,13 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const item = document.createElement("div");
       item.className = "producto-item";
       item.innerHTML = `
-        <div class="d-flex align-items-center justify-content-between">
+        <div class="carrito-producto-info">
           <div class="d-flex align-items-center">
             <img id="imagen-producto-carrito" src="${p.imagen}">
             <div>
               <p><strong>${p.nombre}</strong></p>
               <p>Precio: ${p.costo} ${p.moneda}</p>
-              <p>Cantidad: <input type="number" min="1" value="${p.cantidad}" data-i="${i}" class="cant form-control w-50 d-inline-block"></p>
+              <p>Cantidad: <input class="input-carrito" type="number" min="1" value="${p.cantidad}" data-i="${i}" class="cant form-control w-50 d-inline-block"></p>
               <p>Subtotal: <span class="subtotal">${p.subtotal}</span> ${p.moneda}</p>
             </div>
           </div>

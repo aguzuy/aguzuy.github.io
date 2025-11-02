@@ -2884,6 +2884,7 @@ display: block;
   border: 2px solid var(--card-border);
   border-radius: 2vh;
   padding: 2vw;
+  margin-top: 5vh;
 }
 
 #imagen-producto-carrito {

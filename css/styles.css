@@ -85,27 +85,34 @@ nav a {
 
 .boton-compra {
   display: inline-block;
-  /* Permite aplicar márgenes y padding */
-  padding: 7px 25px 7px 25px;
-  /* Relleno dentro del botón */
+  padding: 7px 25px;
   width: 180px;
   background-color: #E98119;
-  /* Color de fondo */
   color: white;
-  /* Color del texto */
   border: none;
-  /* Elimina el borde predeterminado */
   border-radius: 50px;
-  /* Esquinas redondeadas */
   text-align: center;
-  /* Centra el texto */
   text-decoration: none;
-  /* Elimina el subrayado de los enlaces */
   cursor: pointer;
-  /* Cambia el cursor a una mano al pasar por encima */
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.668));
   margin: 5px;
+  position: relative; /* Necesario para posicionar el contador */
 }
+
+.contador-carrito {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 3px 7px;
+  min-width: 20px;
+  text-align: center;
+}
+
 
 .botones {
   display: inline-block;

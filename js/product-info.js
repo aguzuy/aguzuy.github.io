@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return response.json();
     })
-
+  
 .then(data => {
   mostrarProducto(data);
   mostrarRecomendados(data);
@@ -40,10 +40,22 @@ document.addEventListener("click", (e) => {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     carrito.push(producto);
     localStorage.setItem("carrito", JSON.stringify(carrito));
-
+    actualizarContador();
     alert("Producto agregado al carrito correctamente");
+
+    setTimeout(() => {
+      window.location.href = "cart.html";
+    }, 500);
   }
 });
+
+function actualizarContador() {
+  const contador = document.getElementById("contador-carrito");
+  if (!contador) return;
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  contador.textContent = carrito.length;
+}
+
 
     function mostrarProducto(data){
         const caja= document.createElement("div");

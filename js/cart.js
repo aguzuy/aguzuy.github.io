@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
       lista.appendChild(item);
     });
-
   
     document.querySelectorAll(".cant").forEach(input => {
       input.addEventListener("input", e => {
@@ -60,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         subtotalSpan.textContent = carrito[i].subtotal.toFixed(2);
       });
     });
+    
     document.querySelectorAll(".btn-eliminar").forEach(btn => {
       btn.addEventListener("click", e => {
         const i = e.target.dataset.i;

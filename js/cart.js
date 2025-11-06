@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.querySelector("main .container");
   const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
+  let porcentajeEnvio = 0.05; 
   if (carrito.length === 0) {
     contenedor.innerHTML = `
       <div class="alert alert-info text-center" role="alert">
@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   renderizarCarrito();
+  actualizarCostos();
 
   function renderizarCarrito() {
     contenedor.innerHTML = `
@@ -33,40 +34,57 @@ document.addEventListener("DOMContentLoaded", () => {
               <p>Precio: ${p.costo} ${p.moneda}</p>
               <p>
                 Cantidad: 
-                <input 
-                  class="cant form-control w-50 d-inline-block" 
-                  type="number" 
-                  min="1" 
-                  value="${p.cantidad}" 
-                  data-i="${i}">
+                <input class="cant form-control w-50 d-inline-block" type="number" min="1" value="${p.cantidad}" data-i="${i}">
               </p>
               <p>Subtotal: <span class="subtotal">${p.subtotal.toFixed(2)}</span> ${p.moneda}</p>
             </div>
           </div>
           <button class="btn-eliminar" data-i="${i}">Eliminar</button>
-        </div>
-      `;
+        </div>`;
       lista.appendChild(item);
     });
-  
+
     document.querySelectorAll(".cant").forEach(input => {
       input.addEventListener("input", e => {
         const i = e.target.dataset.i;
         carrito[i].cantidad = parseInt(e.target.value) || 1;
         carrito[i].subtotal = carrito[i].costo * carrito[i].cantidad;
         localStorage.setItem("carrito", JSON.stringify(carrito));
-        const subtotalSpan = e.target.closest(".carrito-producto-info").querySelector(".subtotal");
-        subtotalSpan.textContent = carrito[i].subtotal.toFixed(2);
+        e.target.closest(".carrito-producto-info").querySelector(".subtotal").textContent = carrito[i].subtotal.toFixed(2);
+        actualizarCostos();
       });
     });
-    
+
+
     document.querySelectorAll(".btn-eliminar").forEach(btn => {
       btn.addEventListener("click", e => {
-        const i = e.target.dataset.i;
-        carrito.splice(i, 1);
+        carrito.splice(e.target.dataset.i, 1);
         localStorage.setItem("carrito", JSON.stringify(carrito));
         renderizarCarrito();
+        actualizarCostos();
       });
     });
   }
+
+  
+  function actualizarCostos() {
+    const subtotal = carrito.reduce((acc, p) => acc + p.subtotal, 0);
+    const costoEnvio = subtotal * porcentajeEnvio;
+    const total = subtotal + costoEnvio;
+
+    document.getElementById("subtotalGeneral").textContent = subtotal.toFixed(2);
+    document.getElementById("costoEnvio").textContent = costoEnvio.toFixed(2);
+    document.getElementById("totalFinal").textContent = total.toFixed(2);
+  }
+
+  document.getElementById("guardarEnvio").addEventListener("click", () => {
+    porcentajeEnvio = parseFloat(document.getElementById("tipoEnvio").value);
+    actualizarCostos();
+  });
+
+  document.getElementById("btn-finalizar").addEventListener("click", () => {
+    alert("Compra finalizada con éxito");
+    localStorage.removeItem("carrito");
+    location.reload();
+  });
 });

@@ -3126,7 +3126,23 @@ display: block;
   margin-right: 2vw;
 }
 
-.btn-comprar, .btn-guardar {
+
+.botones-carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4vh;
+}
+
+.fila-botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
+  margin-bottom: 3vh;
+}
+
+.btn-comprar, .btn-guardar, .btn-eliminar, .btn-finalizar {
   background-color: #007bff;
   color: white;
   border: none;
@@ -3137,18 +3153,21 @@ display: block;
   font-size: 2vh;
 }
 
-.btn-comprar:hover, .btn-guardar:hover {
+.btn-comprar:hover, .btn-guardar:hover, .btn-finalizar:hover {
   background-color: #0056b3;
 }
 
 .btn-eliminar {
   background-color: #f59b42;
-  border: none;
-  color: white;
-  padding: 1.5vh 3vw;
-  border-radius: 1.2vh;
-  float: right;
-  font-size: 2vh;
+}
+
+.btn-eliminar:hover {
+  background-color: #d97a2f;
+}
+
+.btn-finalizar {
+  display: block;
+  margin: 0 auto;
 }
 
 #seccion-costos {

@@ -3098,36 +3098,43 @@ display: block;
 .titulo-cart {
   text-align: center;
   font-weight: 700;
-  margin-top: 20px;
+  margin-top: 2.5vh;
   background-color: #f5a04a;
-  padding: 15px;
+  padding: 2vh 2vw;
   color: white;
-  border-radius: 8px;
+  border-radius: 1.2vh;
+  font-size: 2.2vh;
 }
 
 .producto-item {
-  border: 1px solid #b97a38;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 15px;
+  border: 0.2vh solid #b97a38;
+  padding: 2.5vh 2vw;
+  margin-bottom: 2.5vh;
+  border-radius: 2vh;
   background-color: #ffe6cc;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #imagen-producto-carrito {
-  width: 220px;
+  width: 20vw;
+  max-width: 35vh;
   height: auto;
-  border-radius: 10px;
-  margin-right: 20px;
+  border-radius: 1.5vh;
+  margin-right: 2vw;
 }
 
 .btn-comprar, .btn-guardar {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 1.5vh 3vw;
+  border-radius: 1.2vh;
   cursor: pointer;
   transition: 0.3s;
+  font-size: 2vh;
 }
 
 .btn-comprar:hover, .btn-guardar:hover {
@@ -3138,13 +3145,16 @@ display: block;
   background-color: #f59b42;
   border: none;
   color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 1.5vh 3vw;
+  border-radius: 1.2vh;
   float: right;
+  font-size: 2vh;
 }
 
 #seccion-costos {
   background-color: #ffe6cc;
-  border: 1px solid #b97a38;
-  border-radius: 15px;
+  border: 0.2vh solid #b97a38;
+  border-radius: 2vh;
+  padding: 2.5vh 2vw;
+  font-size: 2vh;
 }

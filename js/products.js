@@ -3,7 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const contenedor= document.getElementById("contenedor-main-tarjetas");
     let datos = [];
 
+    
+
     fetch ("https://japceibal.github.io/emercado-api/cats_products/" + cat + ".json")
+    
     .then (response => {
         if(!response.ok){
             throw new Error("network response was not ok" + response.statusText)
@@ -53,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             contenedor.appendChild(caja);
         })
     }
+    
 
     contenedor.addEventListener('click', (e) => {
         const link = e.target.closest('a.btnAgregar');
@@ -144,4 +148,3 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 });
 
-/* Modo uscuro */

@@ -2860,6 +2860,7 @@ display: block;
 
 /* Carrito */
 
+
 .barra-carrito {
   display: flex;
   align-items: center;
@@ -2913,6 +2914,7 @@ display: block;
   transition: 0.3s;
   margin-left: 21vw;
 }
+
 .btn-eliminar:hover {
   background-color: #f59c3b;
 }
@@ -2936,6 +2938,51 @@ display: block;
 .input-carrito {
   width: 20%;
   background-color: var(--input-color);
+}
+.mb-3{
+  width: 25%;
+  grid-column: 1;
+  margin: 0;
+}
+
+.mb-2{
+  width: 25%;
+  grid-column: 1;
+  margin: 0;
+  
+}
+
+.botones-cart{
+  grid-column: 2;
+  grid-row: 2;
+}
+.fila-botones{
+  margin: 0;
+}
+
+#buy1{
+  background-color:#f59c3b ;
+  margin: 0;
+  height: 6vh;
+}
+#buy2{
+  background-color:#f59c3b ;
+  margin: 0;
+  height: 6vh;
+}
+#buy3{
+  background-color:#f59c3b ;
+  margin: 0;
+  height: 6vh;
+}
+.fin{
+  margin: 0;
+  height: 6vh;
+}
+
+#seccion-costos{
+ display: grid;
+ margin-top: 0;
 }
 
 /* cart.html tablet */

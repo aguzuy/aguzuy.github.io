@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.querySelector("main .container");
   const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   let porcentajeEnvio = 0.05; 
+  
   if (carrito.length === 0) {
     contenedor.innerHTML = `
       <div class="alert alert-info text-center" role="alert">
@@ -55,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-
     document.querySelectorAll(".btn-eliminar").forEach(btn => {
       btn.addEventListener("click", e => {
         carrito.splice(e.target.dataset.i, 1);
@@ -66,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  
   function actualizarCostos() {
     const subtotal = carrito.reduce((acc, p) => acc + p.subtotal, 0);
     const costoEnvio = subtotal * porcentajeEnvio;
@@ -82,9 +81,32 @@ document.addEventListener("DOMContentLoaded", () => {
     actualizarCostos();
   });
 
-  document.getElementById("btn-finalizar").addEventListener("click", () => {
-    alert("Compra finalizada con éxito");
-    localStorage.removeItem("carrito");
-    location.reload();
+  document.querySelector(".btn-finalizar").addEventListener("click", () => {
+    const departamento = document.getElementById("departamento").value.trim();
+    const localidad = document.getElementById("localidad").value.trim();
+    const calle = document.getElementById("calle").value.trim();
+    const numero = document.getElementById("numero").value.trim();
+    const esquina = document.getElementById("esquina").value.trim();
+    
+    const formaPago = document.querySelector('input[name="pago"]:checked');
+    
+    let cantidadesValidas = true;
+    carrito.forEach(p => {
+      if (!p.cantidad || p.cantidad <= 0) {
+        cantidadesValidas = false;
+      }
+    });
+
+    if (!departamento || !localidad || !calle || !numero || !esquina) {
+      alert("Por favor complete todos los campos de dirección");
+    } else if (!cantidadesValidas) {
+      alert("Todas las cantidades deben ser mayores a 0");
+    } else if (!formaPago) {
+      alert("Debe seleccionar una forma de pago");
+    } else {
+      alert("¡Compra finalizada con éxito!");
+      localStorage.removeItem("carrito");
+      location.reload();
+    }
   });
 });

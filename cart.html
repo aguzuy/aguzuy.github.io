@@ -21,24 +21,24 @@
   </main>
 
   <section id="seccion-costos" class="container mt-5 p-4 rounded">
-    <h4 class="mb-3">Resumen de compra</h4>
-    <div class="mb-2">
+    <h4 class="mb-3 resumen-titulo">Resumen de compra</h4>
+    <div class="mb-2 info-compra">
       <strong>Subtotal:</strong> <span id="subtotalGeneral">0.00</span> USD
     </div>
-    <div class="mb-2">
+    <div class="mb-2 info-compra">
       <strong>Costo de envío:</strong> <span id="costoEnvio">0.00</span> USD
     </div>
-    <div class="mb-3">
+    <div class="mb-3 info-compra">
       <strong>Total:</strong> <span id="totalFinal">0.00</span> USD
     </div>
 
-    <div class="botones-carrito">
+    <div class="botones-cart">
       <div class="fila-botones">
-        <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modalEnvio">Tipo de envío</button>
-        <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modalDireccion">Dirección de envío</button>
-        <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modalPago">Forma de pago</button>
+        <button id="buy1" class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modalEnvio">Tipo de envío</button>
+        <button id="buy2"class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modalDireccion">Dirección de envío</button>
+        <button id="buy3"class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modalPago">Forma de pago</button>
       </div>
-      <button class="btn-finalizar">Finalizar compra</button>
+      <button id="fin"class="btn-finalizar">Finalizar compra</button>
     </div>
   </section>
 
@@ -103,6 +103,7 @@
   </div>
 
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
 </body>
 </html>

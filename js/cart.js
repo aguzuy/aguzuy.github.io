@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderizarCarrito() {
     contenedor.innerHTML = `
       <div id="listaCarrito" class="mt-4"></div>
-      <div class="text-center mt-4">
-        <button id="btn-comprar" class="btn-comprar">Comprar</button>
+    
       </div>`;
 
     const lista = document.getElementById("listaCarrito");
